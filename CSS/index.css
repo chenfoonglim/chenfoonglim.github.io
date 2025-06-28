@@ -9,63 +9,72 @@ body{
 } */
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-  font-family: sans-serif;
-  scroll-behavior: smooth; /* enables smooth scrolling */
-  background-color: #121212;
-  color: white;
+    font-family: sans-serif;
+    scroll-behavior: smooth;
+    background-color: #121212;
+    color: white;
 }
 
-/* Sticky navbar */
-nav#navbar {
-  position: sticky;
-  top: 20px;
-  background: linear-gradient(180deg, #0D0D0D, #1A1A1A);
-  padding: 1rem 2rem;
-  width: 90%; 
-  max-width: 700px; 
-  margin: 0 auto;
-  border-radius: 90px;
-  z-index: 1000;
+#navbar {
+    position: sticky;
+    top: 20px;
+    background: linear-gradient(180deg, #0D0D0D, #1A1A1A);
+    padding: 1rem 2rem;
+    width: 90%; 
+    max-width: 700px; 
+    margin: 0 auto;
+    border-radius: 90px;
+    z-index: 1000;
 }
 
-nav#navbar ul {
+#navbar ul {
     display: flex;
     justify-content: center;
-    /* gap: 3rem; */
     gap: clamp(1rem, 5vw, 3rem);
     list-style: none;
     white-space: nowrap; 
 }
 
 nav#navbar a {
-  color: white;
-  text-decoration: none;
-  font-weight: lighter;
-  font-size: clamp(0.7rem, 2vw, 1.2rem);
+    color: white;
+    text-decoration: none;
 }
 
 section {
-  min-height: 100vh;
-  padding: 4rem 2rem;
-  /* border-bottom: 1px solid #333; */
+    min-height: 200vh;
+    padding: 4rem 2rem;
+    /* border-bottom: 1px solid #333; */
 }
 .navLink {
-  text-decoration: none;
-  color: white;
-  font-weight: normal;
-  transition: all 0.3s ease;
+    color: white;
+    text-decoration: none;
+    /* font-weight: normal; */
+    transition: all 0.3s ease;
+    font-size: clamp(0.7rem, 2vw, 1.2rem);
+    font-weight: lighter;
 }
 
-.navLink.active {
-  font-weight: bold;
-  background: linear-gradient(180deg, #00ffff, #0077ff);
-    background-clip: text;   
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+.active {
+    font-weight: normal;
+    font-size:clamp(1rem, 2.5vw, 1.4rem);;
+    background: linear-gradient(180deg, #00ffff, #0077ff);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+}
+
+#cloudHome{
+    position: sticky;
+}
+.stickySvg {
+  position: sticky;
+  top: 0; /* or any other value */
+  z-index: -1; /* put behind other content if it's a background */
 }
