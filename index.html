@@ -3,16 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="index.css" rel="stylesheet">
-    <script src="index.js" ></script>
+    <title>Portfolio - Chen Foong</title>
+    <link rel="icon" href="https://t3.ftcdn.net/jpg/02/36/99/22/360_F_236992283_sNOxCVQeFLd5pdqaKGh8DRGMZy7P4XKm.jpg">
+    <link href="css/index.css" rel="stylesheet">
+    <script src="js/index.js" ></script>
 </head>
 <body>
-    <h1>HEllo</h1>
-    <button onclick="rotateDuck()" >
+    <nav id="navbar">
+        <ul>
+            <li><a href="#home" class="navLink">Home</a></li>
+            <li><a href="#services" class="navLink">Services</a></li>
+            <li><a href="#aboutMe" class="navLink">About Me</a></li>
+            <li><a href="#portfolio" class="navLink">Portfolio</a></li>
+            <li><a href="#contact" class="navLink">Contact Me</a></li>
+        </ul>
+    </nav>
+    <section id="home">
+        <h1>Home</h1>
+    </section>
+    <section id="services">
+        <h1>Services</h1>
+    </section>
+    <section id="aboutMe">
+        <h1>About Me</h1>
+    </section>
+    <section id="portfolio">
+        <h1>Portfolio</h1>
+    </section>
+    <section id="contact">
+        <h1>Message Me</h1>
+    </section>
+    <section id="footer">
+        <h1>Footer</h1>
+    </section>
+    
+    <!-- <button onclick="rotateDuck()">
         hello
     </button>
-    <img src="https://scriptchaser1337.github.io/htmlheadache/coolduck.jpg" alt="Placeholder image" id="quack">
-    <img src="data:image/jpeg;base64,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" alt="Placeholder image">
+    <img src="https://scriptchaser1337.github.io/htmlheadache/coolduck.jpg" alt="Placeholder image" id="quack"> -->
 </body>
 </html>

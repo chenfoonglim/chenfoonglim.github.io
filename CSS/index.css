@@ -1,9 +1,71 @@
-#quack{
+body{
+    background-color: #111111;
+}
+
+/* #quack{
     width: 100px;
     height: 100px;
 
-}
-/* .rotated-image{
-    -webkit-transform: rotate(20deg);
-            transform: rotate(20deg);
 } */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  scroll-behavior: smooth; /* enables smooth scrolling */
+  background-color: #121212;
+  color: white;
+}
+
+/* Sticky navbar */
+nav#navbar {
+  position: sticky;
+  top: 20px;
+  background: linear-gradient(180deg, #0D0D0D, #1A1A1A);
+  padding: 1rem 2rem;
+  width: 90%; 
+  max-width: 700px; 
+  margin: 0 auto;
+  border-radius: 90px;
+  z-index: 1000;
+}
+
+nav#navbar ul {
+    display: flex;
+    justify-content: center;
+    /* gap: 3rem; */
+    gap: clamp(1rem, 5vw, 3rem);
+    list-style: none;
+    white-space: nowrap; 
+}
+
+nav#navbar a {
+  color: white;
+  text-decoration: none;
+  font-weight: lighter;
+  font-size: clamp(0.7rem, 2vw, 1.2rem);
+}
+
+section {
+  min-height: 100vh;
+  padding: 4rem 2rem;
+  /* border-bottom: 1px solid #333; */
+}
+.navLink {
+  text-decoration: none;
+  color: white;
+  font-weight: normal;
+  transition: all 0.3s ease;
+}
+
+.navLink.active {
+  font-weight: bold;
+  background: linear-gradient(180deg, #00ffff, #0077ff);
+    background-clip: text;   
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
