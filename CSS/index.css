@@ -25,9 +25,9 @@ body {
     position: sticky;
     top: 20px;
     background: linear-gradient(180deg, #0D0D0D, #1A1A1A);
-    padding: 1rem 2rem;
-    width: 90%; 
-    max-width: 700px; 
+    padding: 0.8rem 2rem;
+    width: 85%; 
+    max-width: 650px; 
     margin: 0 auto;
     border-radius: 90px;
     z-index: 1000;
@@ -39,6 +39,7 @@ body {
     gap: clamp(1rem, 5vw, 3rem);
     list-style: none;
     white-space: nowrap; 
+    align-items: center;
 }
 
 nav#navbar a {
@@ -56,13 +57,13 @@ section {
     text-decoration: none;
     /* font-weight: normal; */
     transition: all 0.3s ease;
-    font-size: clamp(0.7rem, 2vw, 1.2rem);
+    font-size: clamp(0.6rem, 1.8vw, 1rem);
     font-weight: lighter;
 }
 
 .active {
-    font-weight: normal;
-    font-size:clamp(1rem, 2.5vw, 1.4rem);;
+    font-weight: light;
+    font-size:clamp(0.8rem, 2vw, 1.2rem);;
     background: linear-gradient(180deg, #00ffff, #0077ff);
     background-clip: text;
     -webkit-background-clip: text;
@@ -70,11 +71,37 @@ section {
 
 }
 
-#cloudHome{
-    position: sticky;
+/* #home {
+  position: relative;
+  min-height: 100vh;
+  padding: 2rem;
+  overflow: hidden;
+} */
+
+
+#homeContainer {
+  display: flex;
+  /* justify-content: space-between; */
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 4rem;
 }
-.stickySvg {
-  position: sticky;
-  top: 0; /* or any other value */
-  z-index: -1; /* put behind other content if it's a background */
+
+#textDiv {
+  flex: 1;
+  color: white;
+  background-color: blue;
+}
+
+#picDiv {
+  flex: 1;
+  background-color: green;
+}
+
+.stickySvg{
+    display: flex;
+    align-items: flex-start;
+    position: absolute;
+    z-index: -1;
 }
