@@ -1,0 +1,20 @@
+# System files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Editor folders
+.vscode/
+.idea/
+
+# Environment config files (if used)
+.env
+
+# Images
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.svg
