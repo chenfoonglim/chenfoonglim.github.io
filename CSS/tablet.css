@@ -1,4 +1,4 @@
-@media (max-width: 800px) {
+@media (min-width: 801px) and (max-width: 1200px) {
     html{
         scroll-behavior: smooth;
     }
@@ -6,16 +6,6 @@
     body{
         background-color: #111111;
     }
-    html, body {
-        max-width: 100%;
-        overflow-x: hidden;
-    }
-
-    /* #quack{
-        width: 100px;
-        height: 100px;
-
-    } */
 
     * {
         margin: 0;
@@ -29,9 +19,7 @@
         background-color: #121212;
         color: white;
     }
-    #home{
-        margin-top: -5rem;
-    }
+
     #navbar {
         position: sticky;
         top: 20px;
@@ -88,12 +76,12 @@
 
     #homeContainer {
         display: flex;
-        flex-direction: column;
         align-items: center;
         justify-content: center;
         max-width: 1200px;
         margin: -25rem auto;
         gap: 8rem;
+        background-color: red;
     }
     /* 
     #textDiv {
@@ -106,15 +94,13 @@
         justify-content: center;
         align-items: flex-end;
 
-        margin-top: -47rem;
-
     }
 
     #imagePop {
 
-    width: 15rem;
-    height: 20rem;
-    background: url(../images/selfPhoto.png)  -45px -30px / 140% no-repeat;
+    width: 25rem;
+    height: 30rem;
+    background: url(../images/selfPhoto.png)  0px -70px / 100% no-repeat;
     /* background: url(https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/59a6349b-7a40-4af2-bf9a-3a13ddf42093/dd3s0w0-1b22c80b-9501-482f-a23e-b9ba719b6708.png/v1/fill/w_1280,h_1338/domestic_cat_on_a_transparent_background_by_zoostock_dd3s0w0-fullview.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzU5YTYzNDliLTdhNDAtNGFmMi1iZjlhLTNhMTNkZGY0MjA5M1wvZGQzczB3MC0xYjIyYzgwYi05NTAxLTQ4MmYtYTIzZS1iOWJhNzE5YjY3MDgucG5nIiwiaGVpZ2h0IjoiPD0xMzM4Iiwid2lkdGgiOiI8PTEyODAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uud2F0ZXJtYXJrIl0sIndtayI6eyJwYXRoIjoiXC93bVwvNTlhNjM0OWItN2E0MC00YWYyLWJmOWEtM2ExM2RkZjQyMDkzXC96b29zdG9jay00LnBuZyIsIm9wYWNpdHkiOjk1LCJwcm9wb3J0aW9ucyI6MC40NSwiZ3Jhdml0eSI6ImNlbnRlciJ9fQ.xf5Tekkc_QWX23g9bolzJUzTqtAAaakuzaFJRhEj9EA)  -60px 0px / 150% no-repeat; */
     border-radius: 0 0 25rem 25rem;
     z-index: 1;
@@ -122,8 +108,8 @@
 
     #circleMask {
         position: absolute;
-        width: 15rem;
-        height: 15rem;
+        width: 25rem;
+        height: 25rem;
         border-radius: 20rem;
         background: rgba(255, 255, 255, 0.05); /* your glow */
         z-index: 0;
@@ -147,7 +133,6 @@
 
     #textDiv p{
         font-size: 1.5rem;
-        text-align: center;
         color: #707070;
         font-weight: lighter;
         margin-bottom: 0.5rem;
@@ -155,23 +140,19 @@
     }
     #textDiv h2{
         font-size: 1.75rem;
-        text-align: center;
         color: #959595;
         font-weight: lighter;
         margin-bottom: 1.5rem;
         margin-left: 0.5rem;
     }
     #textDiv h1{
-        font-size: 3.5rem;
-        text-align: center;
+        font-size: 3.75rem;
         font-weight: lighter;
         background: linear-gradient(90deg, #0FF 0.34%, #209BFF 90.34%);
         background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         margin-bottom: 1rem;
-        margin-top: 22rem;
-        max-width: 25rem;
     }
     #social a{
         display: flex;
@@ -207,33 +188,29 @@
         display: flex;
         margin-top: 1.5rem;
         align-items: center;
-        justify-content: center;
     }
 
     #homeButton{
         display: flex;
         align-items: center;
         gap: 1.5rem;
-        justify-content: center;
     }
 
     #homeButton a{
-        padding: 0.75rem 2rem;
+        padding: 0.75rem 2.5rem;
         border-radius: 0.5rem;
-        margin-top: 2rem;
-        font-size: 1rem;
+        margin-top: 3rem;
+        font-size: 1.25rem;
         cursor: pointer;
         transition: padding 0.3s ease;
         font-weight: lighter;
         text-decoration: none;
-        min-width: 10rem;
+        min-width: 13rem;
         text-align: center;
-    
-
     }
 
     #homeButton a:hover{
-        padding: 0.95rem 2.3rem;
+        padding: 0.95rem 2.7rem;
         border-radius: 0.6rem;
         /* transform: scale(1.03); */
     }
@@ -249,5 +226,8 @@
         color: #959595;
         border: 1px solid #959595;
     }
+
+
+
 
 }
