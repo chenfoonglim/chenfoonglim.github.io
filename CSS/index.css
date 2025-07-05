@@ -65,16 +65,16 @@ section {
     text-decoration: none;
     /* font-weight: normal; */
     transition: all 0.3s ease;
-    font-size: clamp(0.6rem, 1.8vw, 1rem);
+    font-size: clamp(0.8rem, 1.8vw, 1rem);
     font-weight: lighter;
 }
 .navLink:hover{
-    font-size:clamp(0.8rem, 2vw, 1.2rem);
+    font-size:clamp(1rem, 2vw, 1.2rem);
 }
 
 .active {
     font-weight: light;
-    font-size:clamp(0.8rem, 2vw, 1.2rem);
+    font-size:clamp(1rem, 2vw, 1.2rem);
     background: linear-gradient(180deg, #00ffff, #0077ff);
     background-clip: text;
     -webkit-background-clip: text;
