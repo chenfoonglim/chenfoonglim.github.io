@@ -1,3 +1,93 @@
+@media (max-width: 1024px) {
+
+}
+
+@media (max-width: 600px) {
+
+    section{
+        min-height: 100rem;
+    }
+
+
+    #home{
+        margin-top:-5rem;
+    }
+  #homeContainer {
+    flex-direction: column;
+    gap: 4rem;
+    padding: 0 1rem;
+    margin: -25rem auto;
+
+  }
+
+  #imagePop {
+    width: 18rem;
+    height: 22rem;
+    background-size: cover;
+    background-position: center;
+  }
+
+  #circleMask {
+    width: 18rem;
+    height: 18rem;
+  }
+
+  #textDiv h1 {
+    font-size: 2.75rem;
+    text-align: center;
+  }
+
+  #textDiv h2 {
+    font-size: 1.5rem;
+     text-align: center;
+  }
+
+  #textDiv p {
+    font-size: 1.25rem;
+     text-align: center;
+  }
+
+  #social {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  #social a {
+    width: 2.2rem;
+    height: 2.2rem;
+    margin: 0.3rem;
+  }
+
+  #homeButton {
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  #homeButton a {
+    font-size: 1rem;
+    padding: 0.6rem 2rem;
+    min-width: unset;
+    text-align: center;
+  }
+
+  section {
+    padding: 3rem 1.5rem;
+  }
+
+  .stickySvg {
+    width: 100%;
+    height: auto;
+  }
+
+  .stickySvg svg {
+    width: 100%;
+    height: auto;
+    margin-top: -3rem;
+  }
+}
+
+
 html{
     scroll-behavior: smooth;
 }
@@ -180,13 +270,18 @@ section {
     transform: scale(1.1);
     margin-right: 0.7rem;
     margin-left: 0.3rem;
+    margin-top: 0.05rem;
+    margin-bottom: 0.05rem;
 }
 #social #insta:hover{
     margin-left: 0.1rem;
+    
 } 
 
 #social{
     display: flex;
+    margin-top: 1.5rem;
+    align-items: center;
 }
 
 #homeButton{
@@ -204,6 +299,8 @@ section {
     transition: padding 0.3s ease;
     font-weight: lighter;
     text-decoration: none;
+    min-width: 13rem;
+    text-align: center;
 }
 
 #homeButton a:hover{
