@@ -2,15 +2,25 @@
       /* New */
     html{
         scroll-behavior: smooth;
+        
     }
+
 
     body{
         background-color: #111111;
-    }
-    html, body {
         max-width: 100%;
-        overflow-x: hidden;
+         
+        /* overflow-x: hidden; */
     }
+    /* html, body {
+        max-width: 100%;
+        
+    } */
+/* 
+    #allContent{
+        width: 100%;
+        overflow-x: hidden;
+    } */
 
     /* #quack{
         width: 100px;
@@ -32,6 +42,7 @@
     }
     #home{
         margin-top: -5rem;
+       
     }
     #navbar {
 
@@ -68,6 +79,7 @@
         /* min-height: 100vh; */
         padding: 4rem 2rem;
         /* border-bottom: 1px solid #333; */
+        
     }
     .navLink {
         color: white;
@@ -97,8 +109,10 @@
         align-items: center;
         justify-content: center;
         max-width: 1200px;
-        margin: -25rem auto;
+        margin: -45rem auto;
         gap: 8rem;
+        
+
     }
     /* 
     #textDiv {
@@ -115,17 +129,18 @@
 
 
         margin-top: -8rem;
+        
 
     }
 
     #imagePop {
 
-    width: 15rem;
-    height: 20rem;
-    background: url(../images/selfPhoto.png)  -45px -30px / 140% no-repeat;
-    /* background: url(https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/59a6349b-7a40-4af2-bf9a-3a13ddf42093/dd3s0w0-1b22c80b-9501-482f-a23e-b9ba719b6708.png/v1/fill/w_1280,h_1338/domestic_cat_on_a_transparent_background_by_zoostock_dd3s0w0-fullview.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzU5YTYzNDliLTdhNDAtNGFmMi1iZjlhLTNhMTNkZGY0MjA5M1wvZGQzczB3MC0xYjIyYzgwYi05NTAxLTQ4MmYtYTIzZS1iOWJhNzE5YjY3MDgucG5nIiwiaGVpZ2h0IjoiPD0xMzM4Iiwid2lkdGgiOiI8PTEyODAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uud2F0ZXJtYXJrIl0sIndtayI6eyJwYXRoIjoiXC93bVwvNTlhNjM0OWItN2E0MC00YWYyLWJmOWEtM2ExM2RkZjQyMDkzXC96b29zdG9jay00LnBuZyIsIm9wYWNpdHkiOjk1LCJwcm9wb3J0aW9ucyI6MC40NSwiZ3Jhdml0eSI6ImNlbnRlciJ9fQ.xf5Tekkc_QWX23g9bolzJUzTqtAAaakuzaFJRhEj9EA)  -60px 0px / 150% no-repeat; */
-    border-radius: 0 0 25rem 25rem;
-    z-index: 1;
+        width: 15rem;
+        height: 20rem;
+        background: url(../images/selfPhoto.png)  -45px -30px / 140% no-repeat;
+        /* background: url(https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/59a6349b-7a40-4af2-bf9a-3a13ddf42093/dd3s0w0-1b22c80b-9501-482f-a23e-b9ba719b6708.png/v1/fill/w_1280,h_1338/domestic_cat_on_a_transparent_background_by_zoostock_dd3s0w0-fullview.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzU5YTYzNDliLTdhNDAtNGFmMi1iZjlhLTNhMTNkZGY0MjA5M1wvZGQzczB3MC0xYjIyYzgwYi05NTAxLTQ4MmYtYTIzZS1iOWJhNzE5YjY3MDgucG5nIiwiaGVpZ2h0IjoiPD0xMzM4Iiwid2lkdGgiOiI8PTEyODAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uud2F0ZXJtYXJrIl0sIndtayI6eyJwYXRoIjoiXC93bVwvNTlhNjM0OWItN2E0MC00YWYyLWJmOWEtM2ExM2RkZjQyMDkzXC96b29zdG9jay00LnBuZyIsIm9wYWNpdHkiOjk1LCJwcm9wb3J0aW9ucyI6MC40NSwiZ3Jhdml0eSI6ImNlbnRlciJ9fQ.xf5Tekkc_QWX23g9bolzJUzTqtAAaakuzaFJRhEj9EA)  -60px 0px / 150% no-repeat; */
+        border-radius: 0 0 25rem 25rem;
+        z-index: 1;
     }
 
     #circleMask {
@@ -136,21 +151,29 @@
         background: rgba(255, 255, 255, 0.05); /* your glow */
         z-index: 0;
     }
+
+    #movableSVG{
+        min-height: 50rem;
+
+        /* overflow-x: auto; */
+
+    }
     .stickySvg{
 
         position: sticky;
         top: 0;
-        z-index: -1;
 
         width: 38.72rem;
         height: 30.92688rem;
         /* margin-top: -3rem; */
-        /* background-color: red; */
         
     }
     .stickySvg svg{
         margin-top: -5rem;
+        margin-left: 2rem;
         /* background-color: #0077ff; */
+        width: 100%;
+        overflow-x: hidden;
     }
     #textDiv p{
         display: none;

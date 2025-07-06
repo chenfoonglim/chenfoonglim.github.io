@@ -80,7 +80,7 @@
         align-items: center;
         justify-content: center;
         max-width: 1200px;
-        margin: -25rem auto;
+        margin: -45rem auto;
         gap: 8rem;
     }
     /* 
@@ -113,6 +113,12 @@
         border-radius: 20rem;
         background: rgba(255, 255, 255, 0.05); /* your glow */
         z-index: 0;
+    }
+    #movableSVG{
+        /* background-color: red; */
+        min-height: 50rem;
+        z-index: -1;
+
     }
     .stickySvg{
     
