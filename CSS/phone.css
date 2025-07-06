@@ -2,31 +2,14 @@
       /* New */
     html{
         scroll-behavior: smooth;
-        
     }
-
 
     body{
         background-color: #111111;
         max-width: 100%;
-         
-        /* overflow-x: hidden; */
+
     }
-    /* html, body {
-        max-width: 100%;
-        
-    } */
-/* 
-    #allContent{
-        width: 100%;
-        overflow-x: hidden;
-    } */
 
-    /* #quack{
-        width: 100px;
-        height: 100px;
-
-    } */
 
     * {
         margin: 0;
