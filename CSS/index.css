@@ -20,6 +20,12 @@
         background-color: #121212;
         color: white;
     }
+    section {
+        min-height: 55rem;
+        /* min-height: 100vh; */
+        padding: 4rem 2rem;
+        /* border-bottom: 1px solid #333; */
+    }
     
      #navbar {
 
@@ -38,6 +44,7 @@
         margin: 0 auto;
         border-radius: 90px;
         z-index: 1000;
+        transition: max-width 0.3s ease;
 
     }
 
@@ -56,12 +63,7 @@
         text-decoration: none;
     }
     
-    section {
-        min-height: 55rem;
-        /* min-height: 100vh; */
-        padding: 4rem 2rem;
-        /* border-bottom: 1px solid #333; */
-    }
+ 
     .navLink {
         color: white;
         text-decoration: none;
@@ -73,6 +75,10 @@
     .navLink:hover{
         font-size:clamp(1rem, 2vw, 1.2rem);
     }
+     #navbar:has(.navLink:hover):not(:has(.navLink.active:hover)) {
+    max-width: 660px;
+    }
+
     
     .active {
         font-weight: light;
