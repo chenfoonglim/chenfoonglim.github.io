@@ -1,4 +1,5 @@
 @media (max-width: 800px) {
+      /* New */
     html{
         scroll-behavior: smooth;
     }
@@ -45,7 +46,6 @@
         margin: 0 auto;
         border-radius: 90px;
         z-index: 1000;
-
 
     }
 
@@ -108,10 +108,13 @@
 
     #circleWrapper {
         display: flex;
+        /* position: absolute; */
         justify-content: center;
         align-items: flex-end;
+        order: -1;
 
-        margin-top: -47rem;
+
+        margin-top: -8rem;
 
     }
 
@@ -149,22 +152,34 @@
         margin-top: -5rem;
         /* background-color: #0077ff; */
     }
-
     #textDiv p{
+        display: none;
+    }  
+    #homeContainer p{
         font-size: 1.5rem;
         text-align: center;
         color: #707070;
         font-weight: lighter;
-        margin-bottom: 0.5rem;
+        margin-top: 1rem;
+        margin-bottom: -5.5rem;
         margin-left: 0.6rem;
+        order: -2;
+    }
+    #textDiv{
+        margin-top: -6rem;
     }
     #textDiv h2{
+        display: none;
+    }
+    #homeContainer h2{
         font-size: 1.75rem;
         text-align: center;
         color: #959595;
         font-weight: lighter;
-        margin-bottom: 1.5rem;
+        margin-top: -2rem;
+        /* margin-bottom: 1.5rem; */
         margin-left: 0.5rem;
+        order: -2;
     }
     #textDiv h1{
         font-size: 3.5rem;
@@ -175,8 +190,9 @@
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         margin-bottom: 1rem;
-        margin-top: 22rem;
+        /* margin-top: 22rem; */
         max-width: 25rem;
+        order: -2;
     }
     #social a{
         display: flex;
@@ -228,19 +244,18 @@
         margin-top: 2rem;
         font-size: 1rem;
         cursor: pointer;
-        transition: padding 0.3s ease;
+        transition: all 0.3s ease;
         font-weight: lighter;
         text-decoration: none;
         min-width: 10rem;
         text-align: center;
-    
 
     }
 
     #homeButton a:hover{
-        padding: 0.95rem 2.3rem;
+
         border-radius: 0.6rem;
-        /* transform: scale(1.03); */
+        transform: scale(1.05);
     }
 
     #messageMe{
