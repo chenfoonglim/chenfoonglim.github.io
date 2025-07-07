@@ -37,6 +37,7 @@
         margin: 0 auto;
         border-radius: 90px;
         z-index: 1000;
+         transition: max-width 0.3s ease;
 
     }
 
@@ -53,6 +54,7 @@
         color: white;
         text-decoration: none;
     }
+
 
     section {
         min-height: 45rem;
@@ -72,6 +74,9 @@
         font-size:clamp(1rem, 2vw, 1.2rem);
     }
 
+    #navbar:has(.navLink:hover):not(:has(.navLink.active:hover)) {
+    max-width: 660px;
+    }
     .active {
         font-weight: light;
         font-size:clamp(1rem, 2vw, 1.2rem);
