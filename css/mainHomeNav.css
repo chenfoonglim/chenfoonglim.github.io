@@ -211,12 +211,14 @@
         display: flex;
         margin-top: 1.5rem;
         align-items: center;
+        z-index: 10;
     }
     
     #homeButton{
         display: flex;
         align-items: center;
         gap: 1.5rem;
+         z-index: 10;
     }
     
     #homeButton a{
