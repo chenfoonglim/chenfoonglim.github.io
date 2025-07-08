@@ -141,7 +141,7 @@
 
     #movableSVG{
         min-height: 50rem;
-
+        z-index: -10;
         /* overflow-x: auto; */
 
     }
@@ -251,7 +251,7 @@
         align-items: center;
         gap: 1.5rem;
         justify-content: center;
-        z-index: 10;
+        z-index: 10000;
     }
 
     #homeButton a{
