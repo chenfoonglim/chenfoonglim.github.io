@@ -1,6 +1,5 @@
 #services{
     background-color: #FFFFFF04;
-
 }
 
 #serviceTitle{
@@ -44,13 +43,60 @@
     width: 20rem;
     height: 20rem;
     border-radius: 1.5rem;
-    background-color: rgba(255, 255, 255, 0.04);
-    justify-content: center;
+    /* background-color: rgba(255, 255, 255, 0.04); */
+    background: linear-gradient(180deg,  #8e8e8e10,  #1a1a1a80);
+    /* justify-content: center; */
     align-items: center;
     text-align: center;
     transition: transform 0.2s ease;
+    flex-direction: column;
+    gap: 1rem;
+    padding-top: 3rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    box-shadow: 0 10px 10px rgba(0,0,0, 0.3);
+    backdrop-filter: blur(100px);
+    -webkit-backdrop-filter: blur(100px);
 }
 
 .sIndBoxes:hover{
     transform: scale(1.05);
+}
+
+.sIndBoxes .serviceType{
+     font-size: 1.5rem;
+        font-weight: light;
+        background: linear-gradient(90deg, #0FF 0.34%, #209BFF 90.34%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        margin-bottom: 1rem;
+}
+
+.sIndBoxes .serviceDescription{
+    margin-top: 0.5rem;
+    color: #575757;
+
+    font-weight: lighter;
+}
+
+#services #stickySpace{
+    display: flex;
+    /* background-color: blue; */
+    height: 55rem;
+    /* align-items: flex-end; */
+    justify-content: flex-end;
+}
+
+#services #serviceBG{
+    position: sticky;
+    top: 0;
+    /* background-color: red; */
+    margin-top: -5rem;
+    filter: blur(50px);
+    
+}
+
+#serviceContent{
+    margin-top: -55rem;
 }
