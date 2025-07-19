@@ -1,0 +1,56 @@
+#services{
+    background-color: #FFFFFF04;
+
+}
+
+#serviceTitle{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+#serviceTitle h1{
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-weight: lighter;
+    font-size: 40px;
+}
+
+#serviceTitle h2{
+    font-weight: 100;
+    width: 80%;
+    color: #959595;
+    font-size: 20px;
+    margin-bottom: 2rem;
+}
+
+#sBoxes{
+    display: flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+    /* background-color: blue; */
+    height: 42rem;
+    width: 80%;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    gap: 2rem;
+}
+
+.sIndBoxes{
+    display: flex;
+    width: 20rem;
+    height: 20rem;
+    border-radius: 1.5rem;
+    background-color: rgba(255, 255, 255, 0.04);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.2s ease;
+}
+
+.sIndBoxes:hover{
+    transform: scale(1.05);
+}

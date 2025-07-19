@@ -95,7 +95,7 @@
         align-items: center;
         justify-content: center;
         max-width: 1200px;
-        margin: -45rem auto;
+        margin: -40rem auto;
         gap: 7.5rem;
     }
     /* 
@@ -131,7 +131,7 @@
     }
     #movableSVG{
         /* background-color: red; */
-        min-height: 50rem;
+        min-height: 45rem;
         z-index: -1;
 
     }
