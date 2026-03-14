@@ -28,22 +28,23 @@
 #sBoxes{
     display: flex;
     flex-direction: row;
-    flex-wrap:wrap;
-    /* background-color: blue; */
-    height: 42rem;
-    width: 80%;
+    flex-wrap: nowrap;
+    height: auto;
+    width: 92%;
     justify-content: center;
-    align-items: center;
+    align-items: stretch;
     margin: 0 auto;
-    gap: 2rem;
+    gap: 1.5rem;
+    padding-bottom: 3rem;
 }
 
 .sIndBoxes{
     display: flex;
-    width: 20rem;
-    height: 20rem;
+    flex: 1 1 0;
+    min-width: 0;
+    height: auto;
+    min-height: 15rem;
     border-radius: 1.5rem;
-    /* background-color: rgba(255, 255, 255, 0.04); */
     background: linear-gradient(180deg,  #8e8e8e10,  #1a1a1a80);
     justify-content: center;
     align-items: center;
@@ -51,9 +52,7 @@
     transition: transform 0.2s ease;
     flex-direction: column;
     gap: 0.3rem;
-    /* padding-top: 4rem; */
-    padding-left: 2rem;
-    padding-right: 2rem;
+    padding: 2rem 1.5rem;
     box-shadow: 0 10px 10px rgba(0,0,0, 0.3);
     backdrop-filter: blur(100px);
     -webkit-backdrop-filter: blur(100px);
@@ -98,4 +97,73 @@
 
 #serviceContent{
     margin-top: -55rem;
+}
+
+/* ============ RESPONSIVE FIXES ============ */
+
+@media (max-width: 1200px) {
+    #sBoxes {
+        flex-wrap: wrap;
+        height: auto;
+        padding-bottom: 2rem;
+    }
+    .sIndBoxes {
+        flex: 1 1 calc(50% - 0.75rem);
+        max-width: calc(50% - 0.75rem);
+    }
+    #services #stickySpace {
+        height: 35rem;
+    }
+    #serviceContent {
+        margin-top: -35rem;
+    }
+}
+
+@media (max-width: 800px) {
+    #sBoxes {
+        flex-wrap: wrap;
+        height: auto;
+        width: 95%;
+        padding: 0 0 2rem;
+        gap: 1.25rem;
+    }
+    .sIndBoxes {
+        flex: none;
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        padding: 2rem 1.5rem;
+        min-height: 14rem;
+    }
+    #services #stickySpace {
+        height: 22rem;
+    }
+    #serviceContent {
+        margin-top: -22rem;
+    }
+    #serviceTitle h1 {
+        font-size: 32px;
+    }
+    #serviceTitle h2 {
+        width: 95%;
+        font-size: 16px;
+    }
+}
+
+/* ============ DESKTOP ONLY — shorter section height ============ */
+
+@media (min-width: 1201px) {
+    #services {
+        min-height: auto;
+    }
+    #sBoxes {
+        width: 92%;
+        max-width: 1100px;
+    }
+    #services #stickySpace {
+        height: 30rem;
+    }
+    #serviceContent {
+        margin-top: -30rem;
+    }
 }

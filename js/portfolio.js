@@ -1,0 +1,251 @@
+/* ============================================================
+   portfolio.js  –  Role cycler + Tab switching + Project modal
+   ============================================================ */
+
+/* ── Role cycler ─────────────────────────────────────────────── */
+(function () {
+    var roles = [
+        'Software/Web Developer',
+        'Web Developer',
+        'Creative Designer',
+        'Cybersecurity Student'
+    ];
+    var idx = 0;
+    var el  = document.getElementById('roleCycler');
+    if (!el) return;
+
+    function cycleRole() {
+        idx = (idx + 1) % roles.length;
+
+        /* slide the current text out */
+        el.classList.remove('role-in');
+        el.classList.add('role-out');
+
+        setTimeout(function () {
+            el.textContent = roles[idx];
+            el.classList.remove('role-out');
+            el.classList.add('role-in');
+        }, 360); /* just after the out-animation finishes */
+    }
+
+    setInterval(cycleRole, 2800);
+})();
+
+/* ── Project data ───────────────────────────────────────────── */
+const projectData = {
+
+  /* ── DEV PROJECTS ── */
+  'stars': {
+    title: 'UWA STARS App',
+    year: '2025',
+    tags: ['React Native', 'Mobile Dev', 'Supabase', 'TypeScript'],
+    description:
+      'A cross-platform mobile application built for UWA nursing students to track internship pre-requisites, submission deadlines, and progress milestones. Developed in close collaboration with real clients from the UWA School of Nursing, the app uses Supabase for real-time database sync and authentication, and was designed with a clean, accessible UI to suit students in a healthcare setting.',
+    github: 'https://github.com/chenfoonglim',
+    images: [] // add image paths here e.g. ['images/stars1.png', 'images/stars2.png']
+  },
+
+  'ai-matcher': {
+    title: 'AI Job Matching Web App',
+    year: '2024',
+    tags: ['Web Dev', 'PHP', 'ChatGPT API', 'MySQL'],
+    description:
+      'A full-stack hackathon web application that uses the ChatGPT API to intelligently match job seekers with employers based on skills, experience, and preferences. Built under time pressure during a 24-hour hackathon, the app handles both employer and candidate profiles, performs AI-driven compatibility scoring, and presents ranked match results through a clean web interface.',
+    github: 'https://github.com/chenfoonglim',
+    images: []
+  },
+
+  'survey-mgmt': {
+    title: 'Survey Management Software',
+    year: '2023',
+    tags: ['JavaFX', 'Java', 'Desktop Dev', 'OOP'],
+    description:
+      'A desktop survey-management tool built with JavaFX featuring persistent storage, an analytics dashboard, and multi-role access. The system allows administrators to create and distribute surveys, while respondents can submit answers through a polished GUI. Data is stored persistently and results are visualised through charts and summary views — designed with a clean, professional UI.',
+    github: 'https://github.com/chenfoonglim',
+    images: []
+  },
+
+  'snake-game': {
+    title: 'Multiplayer Retro Snake Game',
+    year: '2022',
+    tags: ['Python', 'Game Dev', 'OOP'],
+    description:
+      'A two-player retro Snake game written in Python featuring real-time state management, collision detection, power-ups, and a live scoreboard. Each player controls a snake on the same keyboard, competing to eat food and outlast the other. The game loop is tightly optimised to maintain consistent frame timing, and the codebase follows OOP principles for clean extensibility.',
+    github: 'https://github.com/chenfoonglim',
+    images: []
+  },
+
+  /* ── ART PORTFOLIO ── */
+  'event-posters': {
+    title: 'Event Poster Design',
+    year: '2023 – 2025',
+    tags: ['Poster Design', 'Photoshop', 'Figma', 'Branding'],
+    description:
+      'A collection of event posters and promotional materials created for the Malaysian Cultural Society at UWA. Designs span cultural night shows, fundraisers, society drives, and social events — each with a distinct visual identity tailored to the occasion. Work spans Photoshop for photo-compositing and detailed illustration, and Figma for layout and typography-heavy pieces.',
+    link: 'https://www.instagram.com/floofing_doodles/',
+    linkLabel: 'View on Instagram',
+    images: []
+  },
+
+  'merchandise': {
+    title: 'Merchandise Design',
+    year: '2023 – 2025',
+    tags: ['Merchandise', 'Design', 'Photoshop', 'Print'],
+    description:
+      'Apparel and merchandise designs produced for cultural events at the Malaysian Cultural Society, UWA — including t-shirts, tote bags, stickers, and lanyards. Each design went through an iterative brief, review, and print-ready production process. The goal was always to balance cultural identity with wearable, modern aesthetics.',
+    link: 'https://www.instagram.com/floofing_doodles/',
+    linkLabel: 'View on Instagram',
+    images: []
+  },
+
+  'digital-illus': {
+    title: 'Digital Illustrations',
+    year: '2021 – Present',
+    tags: ['Digital Art', 'Procreate', 'Illustration', 'Character Design'],
+    description:
+      'Original digital illustrations and character art published under the @floofing_doodles brand on Instagram and YouTube. The body of work spans fan art, original characters, environment pieces, and stylised portraits — produced primarily in Procreate with occasional post-processing in Photoshop. The YouTube channel features speedpaint videos showcasing the creative process.',
+    link: 'https://www.instagram.com/floofing_doodles/',
+    linkLabel: 'View on Instagram',
+    images: []
+  },
+
+  'art-commissions': {
+    title: 'Art Commissions',
+    year: '2022 – Present',
+    tags: ['Commission', 'Procreate', 'Digital Art', 'Portraits'],
+    description:
+      'Custom digital art commissions created for clients worldwide — character portraits, couple illustrations, and original-character artwork. Each piece is crafted individually in Procreate based on client references and briefs, with multiple revision rounds to ensure satisfaction. Completed commissions have been used as profile pictures, prints, and personal gifts.',
+    link: 'https://www.instagram.com/floofing_doodles/',
+    linkLabel: 'View on Instagram',
+    images: []
+  }
+};
+
+
+/* ── Tab switching ───────────────────────────────────────────── */
+document.querySelectorAll('.portTab').forEach(function (btn) {
+  btn.addEventListener('click', function () {
+    // Deactivate all tabs + content panels
+    document.querySelectorAll('.portTab').forEach(function (t) {
+      t.classList.remove('active');
+    });
+    document.querySelectorAll('.portTabContent').forEach(function (panel) {
+      panel.classList.remove('active');
+    });
+
+    // Activate clicked tab + its panel
+    btn.classList.add('active');
+    var targetId = btn.getAttribute('data-tab');
+    var targetPanel = document.getElementById(targetId);
+    if (targetPanel) targetPanel.classList.add('active');
+  });
+});
+
+
+/* ── Modal helpers ───────────────────────────────────────────── */
+var modal   = document.getElementById('projectModal');
+var mTitle  = document.getElementById('modalTitle');
+var mDesc   = document.getElementById('modalDesc');
+var mTags   = document.getElementById('modalTags');
+var mYear   = document.getElementById('modalYear');
+var mLinks  = document.getElementById('modalLinks');
+var mGallery = document.getElementById('modalGallery');
+
+function openModal(projectId) {
+  var data = projectData[projectId];
+  if (!data) return;
+
+  /* Title + year */
+  mTitle.textContent = data.title;
+  mYear.textContent  = data.year;
+
+  /* Tags */
+  mTags.innerHTML = '';
+  (data.tags || []).forEach(function (tag) {
+    var span = document.createElement('span');
+    span.className = 'modal-tag';
+    span.textContent = tag;
+    mTags.appendChild(span);
+  });
+
+  /* Description */
+  mDesc.textContent = data.description;
+
+  /* Links */
+  mLinks.innerHTML = '';
+  if (data.github) {
+    var ghLink = document.createElement('a');
+    ghLink.href = data.github;
+    ghLink.target = '_blank';
+    ghLink.rel = 'noopener noreferrer';
+    ghLink.className = 'projLinkOutline';
+    ghLink.textContent = 'GitHub';
+    mLinks.appendChild(ghLink);
+  }
+  if (data.link) {
+    var extLink = document.createElement('a');
+    extLink.href = data.link;
+    extLink.target = '_blank';
+    extLink.rel = 'noopener noreferrer';
+    extLink.className = 'projLinkBtn';
+    extLink.textContent = data.linkLabel || 'View';
+    mLinks.appendChild(extLink);
+  }
+
+  /* Gallery */
+  mGallery.innerHTML = '';
+  if (data.images && data.images.length > 0) {
+    mGallery.style.display = '';
+    data.images.forEach(function (src) {
+      var img = document.createElement('img');
+      img.src = src;
+      img.alt = data.title;
+      img.className = 'modal-img';
+      mGallery.appendChild(img);
+    });
+  } else {
+    /* No images yet — show a styled placeholder */
+    mGallery.style.display = 'flex';
+    var placeholder = document.createElement('div');
+    placeholder.className = 'modal-placeholder';
+    placeholder.innerHTML =
+      '<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none">' +
+      '<rect x="3" y="3" width="18" height="18" rx="2" stroke="#333" stroke-width="1.5"/>' +
+      '<circle cx="8.5" cy="8.5" r="1.5" fill="#333"/>' +
+      '<path d="M21 15L16 10L5 21" stroke="#333" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>' +
+      '</svg>' +
+      '<p>Images coming soon</p>';
+    mGallery.appendChild(placeholder);
+  }
+
+  /* Show modal */
+  modal.classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeModal() {
+  modal.classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+
+/* ── Open modal when a project card is clicked ───────────────── */
+document.querySelectorAll('.projectCard[data-project-id]').forEach(function (card) {
+  card.style.cursor = 'pointer';
+  card.addEventListener('click', function () {
+    openModal(card.getAttribute('data-project-id'));
+  });
+});
+
+
+/* ── Close modal — button, backdrop, Escape ──────────────────── */
+document.getElementById('modalClose').addEventListener('click', closeModal);
+
+modal.addEventListener('click', function (e) {
+  /* Only close when clicking the dark backdrop (not the card itself) */
+  if (e.target === modal) closeModal();
+});
+
+document.addEventListener('keydown', function (e) {
+  if (e.key === 'Escape') closeModal();
+});

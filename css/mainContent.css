@@ -1,0 +1,897 @@
+/* ============================================================
+   ROLE CYCLER — animated title on the Home section
+   ============================================================ */
+
+#roleCycler {
+    display: inline-block;
+    background: linear-gradient(90deg, #0FF 0.34%, #209BFF 90.34%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+@keyframes roleSlideOut {
+    0%   { opacity: 1; transform: translateY(0);    }
+    100% { opacity: 0; transform: translateY(-18px); }
+}
+
+@keyframes roleSlideIn {
+    0%   { opacity: 0; transform: translateY(18px); }
+    100% { opacity: 1; transform: translateY(0);    }
+}
+
+.role-out {
+    animation: roleSlideOut 0.35s ease forwards;
+}
+
+.role-in {
+    animation: roleSlideIn 0.35s ease forwards;
+}
+
+/* ============================================================
+   STICKY BLOB BACKGROUND — matches Home & Services pattern
+   ============================================================ */
+
+/* Clip horizontal overflow on blob-sections without breaking sticky */
+#aboutMe, #portfolio, #contact {
+    overflow-x: clip;
+}
+
+.blobSpace {
+    display: flex;
+    height: 55rem;
+    pointer-events: none;
+}
+.blobLeft  { justify-content: flex-start; }
+.blobRight { justify-content: flex-end;   }
+
+.stickyBlobSVG {
+    position: sticky;
+    top: 0;
+    margin-top: -5rem;
+    filter: blur(50px);
+    flex-shrink: 0;
+}
+
+/* Each section's inner content overlaps the blob space */
+.sectionInner {
+    margin-top: -55rem;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1100px;
+    position: relative;
+    z-index: 1;
+}
+
+/* Portfolio — blob range */
+#portfolio .blobSpace   { height: 45rem; }
+#portfolio .sectionInner { margin-top: -45rem; max-width: 1300px; }
+
+/* Contact is slightly taller than default */
+#contact .blobSpace   { height: 65rem; }
+#contact .sectionInner { margin-top: -65rem; }
+
+
+/* ============================================================
+   COMMON SECTION HEADER
+   ============================================================ */
+
+.sectionHeader {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.sectionTitle {
+    font-weight: lighter;
+    font-size: 2.5rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.sectionSubtitle {
+    font-weight: 100;
+    color: #959595;
+    font-size: 1.1rem;
+    max-width: 680px;
+    line-height: 1.7;
+}
+
+.subHeading {
+    font-size: 1.4rem;
+    font-weight: lighter;
+    background: linear-gradient(90deg, #0FF 0.34%, #209BFF 90.34%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 1.2rem;
+}
+
+.bodyText {
+    color: #959595;
+    font-weight: lighter;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+}
+
+
+/* ============================================================
+   ABOUT ME
+   ============================================================ */
+
+#aboutMe { background-color: #0d0d0d; }
+
+#aboutGrid {
+    display: flex;
+    gap: 4rem;
+    align-items: flex-start;
+}
+
+#aboutBio   { flex: 1.2; }
+#aboutSkills { flex: 1; }
+
+#aboutStats {
+    display: flex;
+    gap: 1.25rem;
+    margin-top: 2.5rem;
+}
+
+.statCard {
+    flex: 1;
+    background: linear-gradient(180deg, #8e8e8e10, #1a1a1a80);
+    border-radius: 1rem;
+    padding: 1.5rem 1rem;
+    text-align: center;
+    backdrop-filter: blur(100px);
+    -webkit-backdrop-filter: blur(100px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+.statNum {
+    font-size: 2rem;
+    font-weight: lighter;
+    background: linear-gradient(90deg, #0FF 0.34%, #209BFF 90.34%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 0.3rem;
+}
+
+.statLabel {
+    color: #707070;
+    font-size: 0.82rem;
+    font-weight: lighter;
+}
+
+.skillsGrid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.skillTag {
+    padding: 0.45rem 1.1rem;
+    border-radius: 2rem;
+    border: 1px solid #2a2a2a;
+    color: #959595;
+    font-size: 0.88rem;
+    font-weight: lighter;
+    background: rgba(255, 255, 255, 0.02);
+    transition: all 0.3s ease;
+    cursor: default;
+}
+
+.skillTag:hover {
+    border-color: rgba(24, 182, 255, 0.35);
+    color: #18B6FF;
+    background: rgba(24, 182, 255, 0.05);
+}
+
+
+/* ============================================================
+   PORTFOLIO — TABS
+   ============================================================ */
+
+#portfolio { background-color: #111111; }
+
+#portfolioTabs {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-bottom: 2.5rem;
+}
+
+.portTab {
+    padding: 0.55rem 1.75rem;
+    border-radius: 2rem;
+    border: 1px solid #2a2a2a;
+    background: transparent;
+    color: #959595;
+    font-family: inherit;
+    font-size: 0.95rem;
+    font-weight: lighter;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.portTab:hover {
+    border-color: rgba(24, 182, 255, 0.35);
+    color: #18B6FF;
+}
+
+.portTab.active {
+    background: rgba(24, 182, 255, 0.1);
+    border-color: rgba(24, 182, 255, 0.5);
+    color: #18B6FF;
+}
+
+.portTabContent { display: none; }
+.portTabContent.active { display: block; }
+
+
+/* ============================================================
+   PORTFOLIO — GRID & CARDS
+   ============================================================ */
+
+/* Horizontal-scroll card strip */
+#portfolioGrid,
+#artGrid {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 1.5rem;
+    overflow-x: auto;
+    padding-top: 8px;      /* room for card hover lift without clipping */
+    padding-bottom: 0.5rem;
+    padding-left: 5rem;    /* match fade width so first card starts fully visible */
+    padding-right: 5rem;   /* match fade width so last card ends fully visible  */
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+    /* mask fades — works over any background, no colour-matching needed */
+    -webkit-mask-image: linear-gradient(to right, transparent, black 5rem, black calc(100% - 5rem), transparent);
+    mask-image:         linear-gradient(to right, transparent, black 5rem, black calc(100% - 5rem), transparent);
+}
+
+#portfolioGrid::-webkit-scrollbar,
+#artGrid::-webkit-scrollbar { display: none; }
+
+#portfolioGrid .projectCard,
+#artGrid .projectCard {
+    flex: 0 0 340px;
+}
+
+.projectCard {
+    background: linear-gradient(180deg, #8e8e8e10, #1a1a1a80);
+    border-radius: 1.5rem;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(100px);
+    -webkit-backdrop-filter: blur(100px);
+    transition: transform 0.25s ease;
+    cursor: pointer;
+}
+
+.projectCard:hover { transform: translateY(-5px); }
+
+/* Placeholder image areas — dot-grid with coloured glow */
+.projectImage {
+    width: 100%;
+    height: 11rem;
+    background-image:
+        radial-gradient(ellipse at 50% 60%, rgba(32, 155, 255, 0.2) 0%, transparent 70%),
+        linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px);
+    background-size: 100% 100%, 24px 24px, 24px 24px;
+}
+.projectImage.pi2 {
+    background-image:
+        radial-gradient(ellipse at 50% 60%, rgba(0, 255, 255, 0.15) 0%, transparent 70%),
+        linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px);
+    background-size: 100% 100%, 24px 24px, 24px 24px;
+}
+.projectImage.pi3 {
+    background-image:
+        radial-gradient(ellipse at 50% 60%, rgba(110, 0, 255, 0.18) 0%, transparent 70%),
+        linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px);
+    background-size: 100% 100%, 24px 24px, 24px 24px;
+}
+.projectImage.pi4 {
+    background-image:
+        radial-gradient(ellipse at 50% 60%, rgba(0, 210, 110, 0.16) 0%, transparent 70%),
+        linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px);
+    background-size: 100% 100%, 24px 24px, 24px 24px;
+}
+.projectImage.pi5 {
+    background-image:
+        radial-gradient(ellipse at 50% 60%, rgba(255, 60, 180, 0.16) 0%, transparent 70%),
+        linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px);
+    background-size: 100% 100%, 24px 24px, 24px 24px;
+}
+.projectImage.pi6 {
+    background-image:
+        radial-gradient(ellipse at 50% 60%, rgba(255, 180, 0, 0.16) 0%, transparent 70%),
+        linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px);
+    background-size: 100% 100%, 24px 24px, 24px 24px;
+}
+.projectImage.pi7 {
+    background-image:
+        radial-gradient(ellipse at 50% 60%, rgba(180, 0, 255, 0.16) 0%, transparent 70%),
+        linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px);
+    background-size: 100% 100%, 24px 24px, 24px 24px;
+}
+.projectImage.pi8 {
+    background-image:
+        radial-gradient(ellipse at 50% 60%, rgba(255, 120, 30, 0.16) 0%, transparent 70%),
+        linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px);
+    background-size: 100% 100%, 24px 24px, 24px 24px;
+}
+
+.projectInfo { padding: 1.5rem; }
+
+.projectTags {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 0.75rem;
+    flex-wrap: wrap;
+}
+
+.projTag {
+    padding: 0.2rem 0.7rem;
+    border-radius: 2rem;
+    font-size: 0.72rem;
+    font-weight: lighter;
+    border: 1px solid rgba(24, 182, 255, 0.35);
+    color: #18B6FF;
+    background: rgba(24, 182, 255, 0.05);
+}
+
+.projectTitle {
+    font-size: 1.05rem;
+    font-weight: lighter;
+    color: white;
+    margin-bottom: 0.5rem;
+}
+
+.projectDesc {
+    font-size: 0.88rem;
+    color: #707070;
+    font-weight: lighter;
+    line-height: 1.6;
+    margin-bottom: 1.1rem;
+}
+
+.projectLinks {
+    display: flex;
+    gap: 0.75rem;
+    align-items: center;
+}
+
+.projLinkOutline {
+    padding: 0.45rem 1.2rem;
+    border: 1px solid #575757;
+    color: #959595;
+    border-radius: 0.4rem;
+    text-decoration: none;
+    font-size: 0.82rem;
+    font-weight: lighter;
+    transition: all 0.2s ease;
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.projLinkOutline:hover {
+    border-color: rgba(24, 182, 255, 0.35);
+    color: #18B6FF;
+}
+
+.projLinkBtn {
+    padding: 0.45rem 1.2rem;
+    background: #18B6FF;
+    color: white;
+    border-radius: 0.4rem;
+    text-decoration: none;
+    font-size: 0.82rem;
+    font-weight: lighter;
+    transition: all 0.2s ease;
+}
+
+.projLinkBtn:hover { opacity: 0.85; }
+
+
+/* ============================================================
+   PROJECT MODAL
+   ============================================================ */
+
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.25s ease;
+}
+
+.modal-overlay.open {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.modal-card {
+    background: linear-gradient(160deg, #1c1c1c, #0e0e0e);
+    border: 1px solid #252525;
+    border-radius: 1.5rem;
+    width: 100%;
+    max-width: 780px;
+    max-height: 88vh;
+    overflow-y: auto;
+    position: relative;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.7);
+    transform: translateY(20px);
+    transition: transform 0.25s ease;
+}
+
+.modal-overlay.open .modal-card {
+    transform: translateY(0);
+}
+
+.modal-close {
+    position: absolute;
+    top: 1.25rem;
+    right: 1.25rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid #2a2a2a;
+    color: #959595;
+    width: 2.2rem;
+    height: 2.2rem;
+    border-radius: 50%;
+    font-size: 1.1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+    z-index: 1;
+    font-family: inherit;
+    line-height: 1;
+}
+
+.modal-close:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+}
+
+.modal-gallery {
+    display: flex;
+    gap: 0.75rem;
+    padding: 1.5rem 1.5rem 0;
+    overflow-x: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #2a2a2a transparent;
+}
+
+.modal-gallery::-webkit-scrollbar { height: 4px; }
+.modal-gallery::-webkit-scrollbar-track { background: transparent; }
+.modal-gallery::-webkit-scrollbar-thumb { background: #2a2a2a; border-radius: 2px; }
+
+.modal-img {
+    flex-shrink: 0;
+    width: 100%;
+    min-width: 300px;
+    height: 220px;
+    border-radius: 1rem;
+    overflow: hidden;
+    background-image:
+        radial-gradient(ellipse at 50% 50%, rgba(32, 155, 255, 0.2) 0%, transparent 70%),
+        linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+    background-size: 100% 100%, 24px 24px, 24px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #2e2e2e;
+    font-size: 0.82rem;
+    font-weight: lighter;
+}
+
+.modal-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.modal-body { padding: 1.75rem; }
+
+.modal-meta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0.75rem;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.modal-tags {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.modal-tag {
+    padding: 0.2rem 0.7rem;
+    border-radius: 2rem;
+    font-size: 0.72rem;
+    font-weight: lighter;
+    border: 1px solid rgba(24, 182, 255, 0.35);
+    color: #18B6FF;
+    background: rgba(24, 182, 255, 0.05);
+}
+
+.modal-year {
+    color: #3a3a3a;
+    font-size: 0.85rem;
+    font-weight: lighter;
+}
+
+.modal-title {
+    font-size: 1.6rem;
+    font-weight: lighter;
+    background: linear-gradient(90deg, #0FF 0.34%, #209BFF 90.34%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 1rem;
+}
+
+.modal-description {
+    color: #959595;
+    font-weight: lighter;
+    line-height: 1.8;
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+}
+
+.modal-footer {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    border-top: 1px solid #1e1e1e;
+    padding-top: 1.25rem;
+}
+
+.modal-card::-webkit-scrollbar { width: 4px; }
+.modal-card::-webkit-scrollbar-track { background: transparent; }
+.modal-card::-webkit-scrollbar-thumb { background: #2a2a2a; border-radius: 2px; }
+
+
+/* ============================================================
+   CONTACT — CENTERED LAYOUT
+   ============================================================ */
+
+#contact { background-color: #0d0d0d; }
+
+/* Contact info cards in a centred row */
+#contactInfoRow {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-bottom: 2.5rem;
+}
+
+.contactCard {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background: linear-gradient(180deg, #8e8e8e10, #1a1a1a80);
+    border-radius: 1rem;
+    padding: 1.2rem 1.5rem;
+    backdrop-filter: blur(100px);
+    -webkit-backdrop-filter: blur(100px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+    flex: 0 1 240px;
+}
+
+.contactIcon {
+    flex-shrink: 0;
+    width: 2.4rem;
+    height: 2.4rem;
+    border-radius: 0.65rem;
+    background: rgba(24, 182, 255, 0.08);
+    border: 1px solid rgba(24, 182, 255, 0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contactCard h3 {
+    font-size: 0.9rem;
+    font-weight: lighter;
+    color: white;
+    margin-bottom: 0.2rem;
+}
+
+.contactCard p {
+    font-size: 0.82rem;
+    color: #707070;
+    font-weight: lighter;
+}
+
+/* Form centred below the cards */
+#contactForm {
+    max-width: 680px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.formRow {
+    display: flex;
+    gap: 1rem;
+}
+
+.formGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 0.45rem;
+    flex: 1;
+}
+
+.formGroup label {
+    font-size: 0.88rem;
+    color: #959595;
+    font-weight: lighter;
+}
+
+.formGroup input,
+.formGroup textarea {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid #252525;
+    border-radius: 0.5rem;
+    color: white;
+    padding: 0.75rem 1rem;
+    font-family: inherit;
+    font-weight: lighter;
+    font-size: 0.93rem;
+    transition: border-color 0.3s ease;
+    resize: vertical;
+}
+
+.formGroup input:focus,
+.formGroup textarea:focus {
+    outline: none;
+    border-color: rgba(24, 182, 255, 0.3);
+}
+
+.formGroup input::placeholder,
+.formGroup textarea::placeholder { color: #353535; }
+
+#submitBtn {
+    padding: 0.8rem 2.5rem;
+    background: #18B6FF;
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    font-weight: lighter;
+    cursor: pointer;
+    font-family: inherit;
+    transition: all 0.3s ease;
+    align-self: center;
+    min-width: 200px;
+}
+
+#submitBtn:hover {
+    padding: 0.9rem 2.7rem;
+    border-radius: 0.6rem;
+}
+
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+
+section#footer {
+    min-height: auto !important;
+    padding: 3.5rem 2rem 1.5rem !important;
+    border-top: 1px solid #1e1e1e;
+    background-color: #080808;
+}
+
+#footerTop {
+    display: flex;
+    gap: 4rem;
+    max-width: 1100px;
+    margin: 0 auto 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #1a1a1a;
+}
+
+#footerBrand { flex: 2; }
+
+#footerBrand h2 {
+    font-size: 1.5rem;
+    font-weight: lighter;
+    background: linear-gradient(90deg, #0FF 0.34%, #209BFF 90.34%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 0.5rem;
+}
+
+#footerBrand > p {
+    color: #707070;
+    font-size: 0.88rem;
+    font-weight: lighter;
+    margin-bottom: 1.25rem;
+}
+
+#footerSocial {
+    display: flex;
+    gap: 0.5rem;
+}
+
+#footerSocial a {
+    display: flex;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    border: 1px solid #2a2a2a;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+#footerSocial a:hover {
+    border-color: rgba(24, 182, 255, 0.35);
+    background: rgba(24, 182, 255, 0.05);
+    transform: scale(1.1);
+}
+
+#footerNav, #footerContactInfo { flex: 1; }
+
+#footerNav h3,
+#footerContactInfo h3 {
+    font-size: 0.95rem;
+    font-weight: lighter;
+    color: white;
+    margin-bottom: 1rem;
+}
+
+#footerNav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+#footerNav ul li a {
+    color: #707070;
+    text-decoration: none;
+    font-size: 0.88rem;
+    font-weight: lighter;
+    transition: color 0.3s ease;
+}
+
+#footerNav ul li a:hover { color: #18B6FF; }
+
+#footerContactInfo p {
+    color: #707070;
+    font-size: 0.88rem;
+    font-weight: lighter;
+    margin-bottom: 1.25rem;
+    line-height: 1.6;
+}
+
+.footerCTA {
+    padding: 0.55rem 1.4rem;
+    background: #18B6FF;
+    color: white;
+    border-radius: 0.4rem;
+    text-decoration: none;
+    font-size: 0.88rem;
+    font-weight: lighter;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.footerCTA:hover { padding: 0.6rem 1.5rem; }
+
+#footerBottom {
+    max-width: 1100px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#footerBottom p {
+    color: #2e2e2e;
+    font-size: 0.82rem;
+    font-weight: lighter;
+}
+
+
+/* ============================================================
+   RESPONSIVE — TABLET (801–1200px)
+   ============================================================ */
+
+@media (min-width: 801px) and (max-width: 1200px) {
+    .blobSpace        { height: 35rem; }
+    .sectionInner     { margin-top: -35rem; }
+    #portfolio .blobSpace   { height: 55rem; }
+    #portfolio .sectionInner { margin-top: -55rem; }
+    #contact .blobSpace   { height: 45rem; }
+    #contact .sectionInner { margin-top: -45rem; }
+
+    .sectionTitle  { font-size: 2.2rem; }
+    #aboutGrid     { gap: 2.5rem; }
+    #aboutStats    { gap: 1rem; }
+    .statCard      { padding: 1.25rem 0.75rem; }
+    #portfolio .blobSpace   { height: 40rem; }
+    #portfolio .sectionInner { margin-top: -40rem; }
+    #portfolioGrid .projectCard, #artGrid .projectCard { flex: 0 0 280px; }
+    .formRow       { gap: 0.75rem; }
+    #footerTop     { gap: 2.5rem; }
+}
+
+
+/* ============================================================
+   RESPONSIVE — MOBILE (≤800px)
+   ============================================================ */
+
+@media (max-width: 800px) {
+    .blobSpace        { height: 25rem; }
+    .sectionInner     { margin-top: -25rem; }
+    #portfolio .blobSpace   { height: 30rem; }
+    #portfolio .sectionInner { margin-top: -30rem; }
+    #contact .blobSpace   { height: 30rem; }
+    #contact .sectionInner { margin-top: -30rem; }
+
+    .sectionTitle    { font-size: 2rem; }
+    .sectionSubtitle { font-size: 0.93rem; }
+
+    /* About */
+    #aboutGrid   { flex-direction: column; gap: 2rem; }
+    #aboutStats  { gap: 0.75rem; }
+    .statCard    { padding: 1rem 0.5rem; }
+    .statNum     { font-size: 1.6rem; }
+    .statLabel   { font-size: 0.75rem; }
+
+    /* Portfolio */
+    #portfolio .blobSpace   { height: 30rem; }
+    #portfolio .sectionInner { margin-top: -30rem; }
+    #portfolioGrid .projectCard, #artGrid .projectCard { flex: 0 0 260px; }
+    #portfolioTabs  { gap: 0.4rem; }
+    .portTab        { padding: 0.45rem 1.25rem; font-size: 0.88rem; }
+
+    /* Contact */
+    #contactInfoRow  { flex-direction: column; align-items: center; }
+    .contactCard     { flex: none; width: 100%; max-width: 380px; }
+    .formRow         { flex-direction: column; gap: 1.25rem; }
+    #submitBtn       { width: 100%; }
+
+    /* Footer */
+    #footerTop { flex-direction: column; gap: 2rem; }
+
+    /* Modal */
+    .modal-overlay  { padding: 1rem; }
+    .modal-img      { height: 180px; min-width: 240px; }
+    .modal-body     { padding: 1.25rem; }
+    .modal-title    { font-size: 1.3rem; }
+}

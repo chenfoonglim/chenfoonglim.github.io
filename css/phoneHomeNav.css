@@ -80,14 +80,13 @@
         font-size:clamp(0.9rem, 2vw, 1.2rem);
     }
 
-    .active {
+    .navLink.active {
         font-weight: light;
         font-size:clamp(0.9rem, 2vw, 1.2rem);
         background: linear-gradient(180deg, #00ffff, #0077ff);
         background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
-
     }
 
     #homeContainer {
@@ -198,12 +197,7 @@
         font-size: 3.5rem;
         text-align: center;
         font-weight: lighter;
-        background: linear-gradient(90deg, #0FF 0.34%, #209BFF 90.34%);
-        background-clip: text;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
         margin-bottom: 1rem;
-        /* margin-top: 22rem; */
         max-width: 25rem;
         order: -2;
     }

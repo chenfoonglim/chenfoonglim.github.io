@@ -9,7 +9,8 @@
     <link href="css/phoneHomeNav.css" rel="stylesheet">
     <link href="css/tabletHomeNav.css" rel="stylesheet">
     <link href="css/mainServices.css" rel="stylesheet">
-    
+    <link href="css/mainContent.css" rel="stylesheet">
+
 </head>
 <body>
 
@@ -54,7 +55,7 @@
                 <p>Hi, I am</p>
                 <h2>Chen Foong Lim (Sam)</h2>
 
-                <h1>Cybersecurity Student</h1>
+                <h1><span id="roleCycler">Software Developer</span></h1>
                 <div id="social">
                     <a id="insta" href="https://www.instagram.com/floofing_doodles/" target="_blank" >
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -122,147 +123,499 @@
 
             <div id="serviceTitle">
                 <h1>Services</h1>
-                <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eget est ut magna fringilla bibendum. Morbi sem purus, egestas quis leo ac, convallis pulvinar arcu. Aliquam</h2>
+                <h2>From engineering production-ready software to crafting visual designs that stand out — here's what I bring to the table.</h2>
             </div>
             <div id="sBoxes">
-    
+
+                <!-- Web Development -->
                 <div class="sIndBoxes">
                     <div class="iconService">
                         <svg xmlns="http://www.w3.org/2000/svg" width="71" height="70" viewBox="0 0 71 70" fill="none">
-                            <path d="M9.83333 25.3333H61.1667M9.83333 43.6667H61.1667M33.9722 7C28.8247 15.2488 26.0956 24.7768 26.0956 34.5C26.0956 44.2232 28.8247 53.7512 33.9722 62M37.0278 7C42.1753 15.2488 44.9044 24.7768 44.9044 34.5C44.9044 44.2232 42.1753 53.7512 37.0278 62M8 34.5C8 38.1114 8.71131 41.6873 10.0933 45.0238C11.4753 48.3602 13.501 51.3918 16.0546 53.9454C18.6082 56.499 21.6398 58.5247 24.9762 59.9067C28.3127 61.2887 31.8886 62 35.5 62C39.1114 62 42.6873 61.2887 46.0238 59.9067C49.3602 58.5247 52.3918 56.499 54.9454 53.9454C57.499 51.3918 59.5247 48.3602 60.9067 45.0238C62.2887 41.6873 63 38.1114 63 34.5C63 27.2065 60.1027 20.2118 54.9454 15.0546C49.7882 9.89731 42.7935 7 35.5 7C28.2065 7 21.2118 9.89731 16.0546 15.0546C10.8973 20.2118 8 27.2065 8 34.5Z" stroke="url(#paint0_linear_1_47)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M9.83333 25.3333H61.1667M9.83333 43.6667H61.1667M33.9722 7C28.8247 15.2488 26.0956 24.7768 26.0956 34.5C26.0956 44.2232 28.8247 53.7512 33.9722 62M37.0278 7C42.1753 15.2488 44.9044 24.7768 44.9044 34.5C44.9044 44.2232 42.1753 53.7512 37.0278 62M8 34.5C8 38.1114 8.71131 41.6873 10.0933 45.0238C11.4753 48.3602 13.501 51.3918 16.0546 53.9454C18.6082 56.499 21.6398 58.5247 24.9762 59.9067C28.3127 61.2887 31.8886 62 35.5 62C39.1114 62 42.6873 61.2887 46.0238 59.9067C49.3602 58.5247 52.3918 56.499 54.9454 53.9454C57.499 51.3918 59.5247 48.3602 60.9067 45.0238C62.2887 41.6873 63 38.1114 63 34.5C63 27.2065 60.1027 20.2118 54.9454 15.0546C49.7882 9.89731 42.7935 7 35.5 7C28.2065 7 21.2118 9.89731 16.0546 15.0546C10.8973 20.2118 8 27.2065 8 34.5Z" stroke="url(#svc_grad_web)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
                             <defs>
-                                <linearGradient id="paint0_linear_1_47" x1="35.5" y1="7" x2="35.5" y2="62" gradientUnits="userSpaceOnUse">
-                                <stop stop-color="#00FFFF"/>
-                                <stop offset="1" stop-color="#209BFF"/>
+                                <linearGradient id="svc_grad_web" x1="35.5" y1="7" x2="35.5" y2="62" gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#00FFFF"/><stop offset="1" stop-color="#209BFF"/>
                                 </linearGradient>
                             </defs>
                         </svg>
                     </div>
-                    <div class="serviceType">
-                         Web Development
-                    </div>
-                    <div class="serviceDescription">
-                        Lorem ipsum dolor sit amet . Imperdiet Lorem ipsum dolor sit amet consectetur
-                    </div>
-                   
+                    <div class="serviceType">Web Development</div>
+                    <div class="serviceDescription">Full-stack web apps with React, TypeScript, PHP, and Supabase — from concept to deployment.</div>
                 </div>
+
+                <!-- Software Development -->
                 <div class="sIndBoxes">
                     <div class="iconService">
                         <svg xmlns="http://www.w3.org/2000/svg" width="71" height="70" viewBox="0 0 71 70" fill="none">
-                            <path d="M43.6667 6L62 12.875V30.0625H52.8333V57.5625C52.8333 58.4742 52.5114 59.3485 51.9384 59.9932C51.3654 60.6378 50.5882 61 49.7778 61H19.2222C18.4118 61 17.6346 60.6378 17.0616 59.9932C16.4886 59.3485 16.1667 58.4742 16.1667 57.5625V30.0625H7V12.875L25.3333 6C25.3333 8.73505 26.2991 11.3581 28.0182 13.292C29.7373 15.226 32.0688 16.3125 34.5 16.3125C36.9312 16.3125 39.2627 15.226 40.9818 13.292C42.7009 11.3581 43.6667 8.73505 43.6667 6Z" stroke="url(#paint0_linear_1_55)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M27 26L14 35.5L27 45M44 26L57 35.5L44 45M38 14L33 57" stroke="url(#svc_grad_soft)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
                             <defs>
-                                <linearGradient id="paint0_linear_1_55" x1="34.5" y1="6" x2="34.5" y2="61" gradientUnits="userSpaceOnUse">
-                                <stop stop-color="#00FFFF"/>
-                                <stop offset="1" stop-color="#209BFF"/>
+                                <linearGradient id="svc_grad_soft" x1="35.5" y1="7" x2="35.5" y2="62" gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#00FFFF"/><stop offset="1" stop-color="#209BFF"/>
                                 </linearGradient>
                             </defs>
                         </svg>
                     </div>
-                    <div class="serviceType">
-                        Merchandise Design
-                    </div>
-                    <div class="serviceDescription">
-                        Lorem ipsum dolor sit amet . Imperdiet Lorem ipsum dolor sit amet consectetur
-                    </div>
-                   
+                    <div class="serviceType">Software Development</div>
+                    <div class="serviceDescription">Desktop and mobile apps built with Java, JavaFX, Python, Swift, and React Native.</div>
                 </div>
+
+                <!-- Art & Design -->
                 <div class="sIndBoxes">
                     <div class="iconService">
                         <svg xmlns="http://www.w3.org/2000/svg" width="71" height="70" viewBox="0 0 71 70" fill="none">
-                            <path d="M35.5 43.6667H15.6389C13.6129 43.6667 11.6699 42.8619 10.2374 41.4293C8.80481 39.9967 8 38.0537 8 36.0278C8 34.0018 8.80481 32.0588 10.2374 30.6263C11.6699 29.1937 13.6129 28.3889 15.6389 28.3889H17.1667M44.6667 34.5V54.3611C44.6667 56.3871 43.8619 58.3301 42.4293 59.7626C40.9967 61.1952 39.0537 62 37.0278 62C35.0018 62 33.0588 61.1952 31.6263 59.7626C30.1937 58.3301 29.3889 56.3871 29.3889 54.3611V52.8333M35.5 25.3333H55.3611C57.3871 25.3333 59.3301 26.1381 60.7626 27.5707C62.1952 29.0033 63 30.9463 63 32.9722C63 34.9982 62.1952 36.9412 60.7626 38.3737C59.3301 39.8063 57.3871 40.6111 55.3611 40.6111H53.8333M26.3333 34.5V14.6389C26.3333 12.6129 27.1381 10.6699 28.5707 9.23738C30.0033 7.80481 31.9463 7 33.9722 7C35.9982 7 37.9412 7.80481 39.3737 9.23738C40.8063 10.6699 41.6111 12.6129 41.6111 14.6389V16.1667" stroke="url(#paint0_linear_1_63)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M47 11C48.3261 11 49.5979 11.5268 50.5355 12.4645C51.4732 13.4021 52 14.6739 52 16C52 17.3261 51.4732 18.5979 50.5355 19.5355L22 48L10 51L13 39L41.5 10.5C42.4261 9.54895 43.6888 9.00697 45.012 9.00002C46.3353 8.99307 47.6034 9.52167 48.539 10.462L47 11Z" stroke="url(#svc_grad_art)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M39 18L53 32" stroke="url(#svc_grad_art)" stroke-width="4" stroke-linecap="round"/>
                             <defs>
-                                <linearGradient id="paint0_linear_1_63" x1="35.5" y1="7" x2="35.5" y2="62" gradientUnits="userSpaceOnUse">
-                                <stop stop-color="#00FFFF"/>
-                                <stop offset="1" stop-color="#209BFF"/>
+                                <linearGradient id="svc_grad_art" x1="35.5" y1="7" x2="35.5" y2="62" gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#00FFFF"/><stop offset="1" stop-color="#209BFF"/>
                                 </linearGradient>
                             </defs>
                         </svg>
                     </div>
-                    <div class="serviceType">
-                        Software Design
-                    </div>
-                    <div class="serviceDescription">
-                        Lorem ipsum dolor sit amet . Imperdiet Lorem ipsum dolor sit amet consectetur
-                    </div>
-                   
+                    <div class="serviceType">Art &amp; Design</div>
+                    <div class="serviceDescription">Event posters, merchandise, and digital illustrations using Photoshop, Figma, and Procreate.</div>
                 </div>
+
+                <!-- Cybersecurity -->
                 <div class="sIndBoxes">
                     <div class="iconService">
                         <svg xmlns="http://www.w3.org/2000/svg" width="71" height="70" viewBox="0 0 71 70" fill="none">
-                        <path d="M40.6667 18.2778H40.6972M4 42.7222L19.2778 27.4444C22.1133 24.7158 25.6089 24.7158 28.4444 27.4444L43.7222 42.7222M37.6111 36.6111L40.6667 33.5555C43.5022 30.8269 46.9978 30.8269 49.8333 33.5555L59 42.7222M4 12.1667C4 9.73552 4.96577 7.40394 6.68485 5.68485C8.40394 3.96577 10.7355 3 13.1667 3H49.8333C52.2645 3 54.5961 3.96577 56.3151 5.68485C58.0342 7.40394 59 9.73552 59 12.1667V48.8333C59 51.2645 58.0342 53.5961 56.3151 55.3151C54.5961 57.0342 52.2645 58 49.8333 58H13.1667C10.7355 58 8.40394 57.0342 6.68485 55.3151C4.96577 53.5961 4 51.2645 4 48.8333V12.1667Z" stroke="url(#paint0_linear_1_71)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M35.5 8L11 19.5V38.5C11 51.5 22 63.5 35.5 67C49 63.5 60 51.5 60 38.5V19.5L35.5 8Z" stroke="url(#svc_grad_sec)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M26 36L32.5 42.5L46 29" stroke="url(#svc_grad_sec)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
                             <defs>
-                                <linearGradient id="paint0_linear_1_71" x1="31.5" y1="3" x2="31.5" y2="58" gradientUnits="userSpaceOnUse">
-                                <stop stop-color="#00FFFF"/>
-                                <stop offset="1" stop-color="#209BFF"/>
+                                <linearGradient id="svc_grad_sec" x1="35.5" y1="7" x2="35.5" y2="67" gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#00FFFF"/><stop offset="1" stop-color="#209BFF"/>
                                 </linearGradient>
                             </defs>
                         </svg>
                     </div>
-                    <div class="serviceType">
-                         Poster Design
-                    </div>
-                    <div class="serviceDescription">
-                        Lorem ipsum dolor sit amet . Imperdiet Lorem ipsum dolor sit amet consectetur
-                    </div>
-                   
+                    <div class="serviceType">Cybersecurity</div>
+                    <div class="serviceDescription">Security-conscious software design — studying CS &amp; Cybersecurity at UWA, graduating 2026.</div>
                 </div>
-                <div class="sIndBoxes">
-                    <div class="iconService">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="60" height="59" viewBox="0 0 60 59" fill="none">
-                            <path d="M18.3889 33.1667C21.4985 24.9319 26.7738 17.6895 33.6577 12.2038C40.5416 6.71821 48.7789 3.19289 57.5 2C56.3071 10.7211 52.7817 18.9584 47.2961 25.8423C41.8105 32.7263 34.568 38.0015 26.3333 41.1111M25.7221 20.3333C31.6596 23.0738 36.4261 27.8403 39.1666 33.7778M2.5 57V44.7778C2.5 42.3605 3.21682 39.9974 4.55981 37.9875C5.90281 35.9775 7.81166 34.411 10.045 33.4859C12.2783 32.5608 14.7358 32.3188 17.1067 32.7904C19.4775 33.262 21.6553 34.4261 23.3646 36.1354C25.0739 37.8447 26.238 40.0225 26.7096 42.3933C27.1812 44.7642 26.9391 47.2217 26.0141 49.455C25.089 51.6883 23.5224 53.5972 21.5125 54.9402C19.5026 56.2832 17.1395 57 14.7222 57H2.5Z" stroke="url(#paint0_linear_33_21)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-                            <defs>
-                                <linearGradient id="paint0_linear_33_21" x1="30" y1="2" x2="30" y2="57" gradientUnits="userSpaceOnUse">
-                                <stop stop-color="#00FFFF"/>
-                                <stop offset="1" stop-color="#209BFF"/>
-                                </linearGradient>
-                            </defs>
-                        </svg>
-                    </div>
-                    <div class="serviceType">
-                        Art Commissions
-                    </div>
-                    <div class="serviceDescription">
-                        Lorem ipsum dolor sit amet . Imperdiet Lorem ipsum dolor sit amet consectetur
-                    </div>
-                   
-                </div>
-                <div class="sIndBoxes">
-                    <div class="iconService">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="71" height="70" viewBox="0 0 71 70" fill="none">
-                            <path d="M43.1389 14.6389L55.3611 26.8611M35.5 22.2778L20.2222 7L8 19.2222L23.2778 34.5M20.2222 22.2778L15.6389 26.8611M47.7222 34.5L63 49.7778L50.7778 62L35.5 46.7222M47.7222 49.7778L43.1389 54.3611M8 62H20.2222L59.9444 22.2778C61.5652 20.657 62.4757 18.4588 62.4757 16.1667C62.4757 13.8745 61.5652 11.6763 59.9444 10.0555C58.3237 8.43478 56.1254 7.52424 53.8333 7.52424C51.5412 7.52424 49.343 8.43478 47.7222 10.0555L8 49.7778V62Z" stroke="url(#paint0_linear_1_87)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-                            <defs>
-                                <linearGradient id="paint0_linear_1_87" x1="35.5" y1="7" x2="35.5" y2="62" gradientUnits="userSpaceOnUse">
-                                <stop stop-color="#00FFFF"/>
-                                <stop offset="1" stop-color="#209BFF"/>
-                                </linearGradient>
-                            </defs>
-                        </svg>
-                    </div>
-                    <div class="serviceType">
-                        Sprite Design
-                    </div>
-                    <div class="serviceDescription">
-                        Lorem ipsum dolor sit amet . Imperdiet Lorem ipsum dolor sit amet consectetur
-                    </div>
-                   
-                </div>
+
             </div>
         </div>
 
     </section>
+    <!-- ======== ABOUT ME ======== -->
     <section id="aboutMe">
-        <h1>About Me</h1>
+        <div class="blobSpace blobLeft">
+            <svg class="stickyBlobSVG" xmlns="http://www.w3.org/2000/svg" width="818" height="693" viewBox="0 0 818 693" fill="none">
+                <g filter="url(#filterAbout)">
+                    <path d="M250.916 149C381.916 191 329.159 99 421.159 99C539.659 99 493.978 208.899 619.159 204.755C744.339 200.611 748.659 305.503 646.659 362.255C544.658 419.008 629.22 492.372 581.416 540.427C526.014 596.121 487.458 540.427 408.902 540.427C330.345 540.427 263.916 643.497 165.916 563.255C67.9157 483.014 253.159 410.255 148.159 341.755C43.1586 273.255 119.916 107 250.916 149Z" fill="url(#paintAbout)"/>
+                </g>
+                <defs>
+                    <filter id="filterAbout" x="0" y="0" width="817.52" height="692.83" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                        <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                        <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+                        <feGaussianBlur stdDeviation="49.5" result="effectAbout"/>
+                    </filter>
+                    <linearGradient id="paintAbout" x1="330.793" y1="153.645" x2="694.967" y2="507.355" gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#00FFFF" stop-opacity="0.07"/>
+                        <stop offset="1" stop-color="#209BFF" stop-opacity="0.07"/>
+                    </linearGradient>
+                </defs>
+            </svg>
+        </div>
+        <div id="aboutInner" class="sectionInner">
+            <div class="sectionHeader">
+                <h1 class="sectionTitle">About Me</h1>
+                <p class="sectionSubtitle">Final-year Computer Science &amp; Cybersecurity student at the University of Western Australia. Passionate about building impactful software and bridging technology with creativity.</p>
+            </div>
+            <div id="aboutGrid">
+                <div id="aboutBio">
+                    <h2 class="subHeading">Who I Am</h2>
+                    <p class="bodyText">I'm studying Computer Science and Cybersecurity at UWA (WAM 83.5), with hands-on experience in full-stack web development, mobile app development with React Native, and desktop application design. I've collaborated directly with real clients, shipped a hackathon project under tight time constraints, and built software used by students at UWA.</p>
+                    <p class="bodyText">Beyond code, I serve as Creative Assistant Director for UWA's Malaysian Cultural Society — designing event posters, merchandise, and promotional materials. I also create digital illustrations under the <em style="color:#959595">@floofing_doodles</em> brand on Instagram and YouTube.</p>
+                    <div id="aboutStats">
+                        <div class="statCard">
+                            <h3 class="statNum">83.5</h3>
+                            <p class="statLabel">WAM at UWA</p>
+                        </div>
+                        <div class="statCard">
+                            <h3 class="statNum">4+</h3>
+                            <p class="statLabel">Projects Built</p>
+                        </div>
+                        <div class="statCard">
+                            <h3 class="statNum">2026</h3>
+                            <p class="statLabel">Graduating</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="aboutSkills">
+                    <h2 class="subHeading">Skills &amp; Tools</h2>
+                    <div class="skillsGrid">
+                        <span class="skillTag">Python</span>
+                        <span class="skillTag">Java</span>
+                        <span class="skillTag">TypeScript</span>
+                        <span class="skillTag">Swift</span>
+                        <span class="skillTag">JavaScript</span>
+                        <span class="skillTag">HTML / CSS</span>
+                        <span class="skillTag">React Native</span>
+                        <span class="skillTag">JavaFX</span>
+                        <span class="skillTag">PHP</span>
+                        <span class="skillTag">Supabase</span>
+                        <span class="skillTag">MySQL</span>
+                        <span class="skillTag">Figma</span>
+                        <span class="skillTag">Photoshop</span>
+                        <span class="skillTag">Procreate</span>
+                        <span class="skillTag">Git</span>
+                        <span class="skillTag">Agile</span>
+                        <span class="skillTag">OOP</span>
+                        <span class="skillTag">UI/UX Design</span>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
+
+    <!-- ======== PORTFOLIO ======== -->
     <section id="portfolio">
-        <h1>Portfolio</h1>
+        <div class="blobSpace blobRight">
+            <svg class="stickyBlobSVG" xmlns="http://www.w3.org/2000/svg" width="818" height="693" viewBox="0 0 818 693" fill="none">
+                <g filter="url(#filterPort)">
+                    <path d="M250.916 149C381.916 191 329.159 99 421.159 99C539.659 99 493.978 208.899 619.159 204.755C744.339 200.611 748.659 305.503 646.659 362.255C544.658 419.008 629.22 492.372 581.416 540.427C526.014 596.121 487.458 540.427 408.902 540.427C330.345 540.427 263.916 643.497 165.916 563.255C67.9157 483.014 253.159 410.255 148.159 341.755C43.1586 273.255 119.916 107 250.916 149Z" fill="url(#paintPort)"/>
+                </g>
+                <defs>
+                    <filter id="filterPort" x="0" y="0" width="817.52" height="692.83" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                        <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                        <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+                        <feGaussianBlur stdDeviation="49.5" result="effectPort"/>
+                    </filter>
+                    <linearGradient id="paintPort" x1="330.793" y1="153.645" x2="694.967" y2="507.355" gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#00FFFF" stop-opacity="0.06"/>
+                        <stop offset="1" stop-color="#209BFF" stop-opacity="0.09"/>
+                    </linearGradient>
+                </defs>
+            </svg>
+        </div>
+        <div id="portfolioInner" class="sectionInner">
+            <div class="sectionHeader">
+                <h1 class="sectionTitle">Portfolio</h1>
+                <p class="sectionSubtitle">From client-driven mobile apps and AI-integrated web platforms to digital illustrations and event design — here's what I've been building.</p>
+            </div>
+
+            <!-- Tab buttons -->
+            <div id="portfolioTabs">
+                <button class="portTab active" data-tab="devProjects">Dev Projects</button>
+                <button class="portTab" data-tab="artProjects">Art Portfolio</button>
+            </div>
+
+            <!-- ── DEV PROJECTS ── -->
+            <div id="devProjects" class="portTabContent active">
+                <div id="portfolioGrid">
+
+                    <div class="projectCard" data-project-id="stars">
+                        <div class="projectImage"></div>
+                        <div class="projectInfo">
+                            <div class="projectTags">
+                                <span class="projTag">React Native</span>
+                                <span class="projTag">Mobile Dev</span>
+                                <span class="projTag">Supabase</span>
+                            </div>
+                            <h3 class="projectTitle">UWA STARS App</h3>
+                            <p class="projectDesc">A React Native mobile app helping UWA nursing students track internship pre-requisites and deadlines.</p>
+                            <div class="projectLinks">
+                                <a href="https://github.com/chenfoonglim" target="_blank" class="projLinkOutline" onclick="event.stopPropagation()">GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="projectCard" data-project-id="ai-matcher">
+                        <div class="projectImage pi2"></div>
+                        <div class="projectInfo">
+                            <div class="projectTags">
+                                <span class="projTag">Web Dev</span>
+                                <span class="projTag">PHP</span>
+                                <span class="projTag">ChatGPT API</span>
+                            </div>
+                            <h3 class="projectTitle">AI Job Matching Web App</h3>
+                            <p class="projectDesc">Full-stack hackathon web app using ChatGPT API to intelligently match employees with employers.</p>
+                            <div class="projectLinks">
+                                <a href="https://github.com/chenfoonglim" target="_blank" class="projLinkOutline" onclick="event.stopPropagation()">GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="projectCard" data-project-id="survey-mgmt">
+                        <div class="projectImage pi3"></div>
+                        <div class="projectInfo">
+                            <div class="projectTags">
+                                <span class="projTag">JavaFX</span>
+                                <span class="projTag">Java</span>
+                                <span class="projTag">Desktop Dev</span>
+                            </div>
+                            <h3 class="projectTitle">Survey Management Software</h3>
+                            <p class="projectDesc">A desktop survey tool with persistent storage, analytics dashboards, and clean UI design.</p>
+                            <div class="projectLinks">
+                                <a href="https://github.com/chenfoonglim" target="_blank" class="projLinkOutline" onclick="event.stopPropagation()">GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="projectCard" data-project-id="snake-game">
+                        <div class="projectImage pi4"></div>
+                        <div class="projectInfo">
+                            <div class="projectTags">
+                                <span class="projTag">Python</span>
+                                <span class="projTag">Game Dev</span>
+                            </div>
+                            <h3 class="projectTitle">Multiplayer Retro Snake Game</h3>
+                            <p class="projectDesc">A two-player retro Snake game with real-time state management, collision detection, and score tracking.</p>
+                            <div class="projectLinks">
+                                <a href="https://github.com/chenfoonglim" target="_blank" class="projLinkOutline" onclick="event.stopPropagation()">GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- ── ART PORTFOLIO ── -->
+            <div id="artProjects" class="portTabContent">
+                <div id="artGrid">
+
+                    <div class="projectCard" data-project-id="event-posters">
+                        <div class="projectImage pi5"></div>
+                        <div class="projectInfo">
+                            <div class="projectTags">
+                                <span class="projTag">Poster Design</span>
+                                <span class="projTag">Photoshop</span>
+                                <span class="projTag">Figma</span>
+                            </div>
+                            <h3 class="projectTitle">Event Poster Design</h3>
+                            <p class="projectDesc">Event posters and promotional materials for the Malaysian Cultural Society at UWA.</p>
+                            <div class="projectLinks">
+                                <a href="https://www.instagram.com/floofing_doodles/" target="_blank" class="projLinkBtn" onclick="event.stopPropagation()">Instagram</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="projectCard" data-project-id="merchandise">
+                        <div class="projectImage pi6"></div>
+                        <div class="projectInfo">
+                            <div class="projectTags">
+                                <span class="projTag">Merchandise</span>
+                                <span class="projTag">Design</span>
+                                <span class="projTag">Photoshop</span>
+                            </div>
+                            <h3 class="projectTitle">Merchandise Design</h3>
+                            <p class="projectDesc">Apparel and merchandise designs for cultural events at the Malaysian Cultural Society, UWA.</p>
+                            <div class="projectLinks">
+                                <a href="https://www.instagram.com/floofing_doodles/" target="_blank" class="projLinkBtn" onclick="event.stopPropagation()">Instagram</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="projectCard" data-project-id="digital-illus">
+                        <div class="projectImage pi7"></div>
+                        <div class="projectInfo">
+                            <div class="projectTags">
+                                <span class="projTag">Digital Art</span>
+                                <span class="projTag">Procreate</span>
+                                <span class="projTag">Illustration</span>
+                            </div>
+                            <h3 class="projectTitle">Digital Illustrations</h3>
+                            <p class="projectDesc">Original digital illustrations and character art posted on @floofing_doodles — from fan art to original creations.</p>
+                            <div class="projectLinks">
+                                <a href="https://www.instagram.com/floofing_doodles/" target="_blank" class="projLinkBtn" onclick="event.stopPropagation()">Instagram</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="projectCard" data-project-id="art-commissions">
+                        <div class="projectImage pi8"></div>
+                        <div class="projectInfo">
+                            <div class="projectTags">
+                                <span class="projTag">Commission</span>
+                                <span class="projTag">Procreate</span>
+                                <span class="projTag">Digital Art</span>
+                            </div>
+                            <h3 class="projectTitle">Art Commissions</h3>
+                            <p class="projectDesc">Custom digital art commissions — character portraits and illustrations created with Procreate and Photoshop.</p>
+                            <div class="projectLinks">
+                                <a href="https://www.instagram.com/floofing_doodles/" target="_blank" class="projLinkBtn" onclick="event.stopPropagation()">Instagram</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
     </section>
+
+    <!-- ======== CONTACT ======== -->
     <section id="contact">
-        <h1>Contact Me</h1>
+        <div class="blobSpace blobLeft">
+            <svg class="stickyBlobSVG" xmlns="http://www.w3.org/2000/svg" width="818" height="693" viewBox="0 0 818 693" fill="none">
+                <g filter="url(#filterContact)">
+                    <path d="M250.916 149C381.916 191 329.159 99 421.159 99C539.659 99 493.978 208.899 619.159 204.755C744.339 200.611 748.659 305.503 646.659 362.255C544.658 419.008 629.22 492.372 581.416 540.427C526.014 596.121 487.458 540.427 408.902 540.427C330.345 540.427 263.916 643.497 165.916 563.255C67.9157 483.014 253.159 410.255 148.159 341.755C43.1586 273.255 119.916 107 250.916 149Z" fill="url(#paintContact)"/>
+                </g>
+                <defs>
+                    <filter id="filterContact" x="0" y="0" width="817.52" height="692.83" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                        <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                        <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+                        <feGaussianBlur stdDeviation="49.5" result="effectContact"/>
+                    </filter>
+                    <linearGradient id="paintContact" x1="330.793" y1="153.645" x2="694.967" y2="507.355" gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#00FFFF" stop-opacity="0.07"/>
+                        <stop offset="1" stop-color="#209BFF" stop-opacity="0.09"/>
+                    </linearGradient>
+                </defs>
+            </svg>
+        </div>
+        <div id="contactInner" class="sectionInner">
+            <div class="sectionHeader">
+                <h1 class="sectionTitle">Contact Me</h1>
+                <p class="sectionSubtitle">Have a project in mind, want to collaborate, or just want to say hello? I'd love to hear from you.</p>
+            </div>
+
+            <!-- Info cards — centred row -->
+            <div id="contactInfoRow">
+                <div class="contactCard">
+                    <div class="contactIcon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none">
+                            <path d="M4 4H20C21.1 4 22 4.9 22 6V18C22 19.1 21.1 20 20 20H4C2.9 20 2 19.1 2 18V6C2 4.9 2.9 4 4 4Z" stroke="url(#iconGrad1)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M22 6L12 13L2 6" stroke="url(#iconGrad1b)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <defs>
+                                <linearGradient id="iconGrad1" x1="2" y1="4" x2="22" y2="20" gradientUnits="userSpaceOnUse"><stop stop-color="#00FFFF"/><stop offset="1" stop-color="#209BFF"/></linearGradient>
+                                <linearGradient id="iconGrad1b" x1="2" y1="6" x2="22" y2="13" gradientUnits="userSpaceOnUse"><stop stop-color="#00FFFF"/><stop offset="1" stop-color="#209BFF"/></linearGradient>
+                            </defs>
+                        </svg>
+                    </div>
+                    <div>
+                        <h3>Email</h3>
+                        <p>s.chenfoong.lim@gmail.com</p>
+                    </div>
+                </div>
+                <div class="contactCard">
+                    <div class="contactIcon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none">
+                            <path d="M21 10C21 17 12 23 12 23C12 23 3 17 3 10C3 7.61305 3.94821 5.32387 5.63604 3.63604C7.32387 1.94821 9.61305 1 12 1C14.3869 1 16.6761 1.94821 18.3639 3.63604C20.0518 5.32387 21 7.61305 21 10Z" stroke="url(#iconGrad2)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M12 13C13.6569 13 15 11.6569 15 10C15 8.34315 13.6569 7 12 7C10.3431 7 9 8.34315 9 10C9 11.6569 10.3431 13 12 13Z" stroke="url(#iconGrad2b)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <defs>
+                                <linearGradient id="iconGrad2" x1="3" y1="1" x2="21" y2="23" gradientUnits="userSpaceOnUse"><stop stop-color="#00FFFF"/><stop offset="1" stop-color="#209BFF"/></linearGradient>
+                                <linearGradient id="iconGrad2b" x1="9" y1="7" x2="15" y2="13" gradientUnits="userSpaceOnUse"><stop stop-color="#00FFFF"/><stop offset="1" stop-color="#209BFF"/></linearGradient>
+                            </defs>
+                        </svg>
+                    </div>
+                    <div>
+                        <h3>Location</h3>
+                        <p>Perth, WA, Australia</p>
+                    </div>
+                </div>
+                <div class="contactCard">
+                    <div class="contactIcon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none">
+                            <circle cx="12" cy="12" r="10" stroke="url(#iconGrad3)" stroke-width="2"/>
+                            <path d="M12 6V12L16 14" stroke="url(#iconGrad3b)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <defs>
+                                <linearGradient id="iconGrad3" x1="2" y1="2" x2="22" y2="22" gradientUnits="userSpaceOnUse"><stop stop-color="#00FFFF"/><stop offset="1" stop-color="#209BFF"/></linearGradient>
+                                <linearGradient id="iconGrad3b" x1="12" y1="6" x2="16" y2="14" gradientUnits="userSpaceOnUse"><stop stop-color="#00FFFF"/><stop offset="1" stop-color="#209BFF"/></linearGradient>
+                            </defs>
+                        </svg>
+                    </div>
+                    <div>
+                        <h3>Availability</h3>
+                        <p>Graduating 2026 · Open to roles</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Form — centred -->
+            <form id="contactForm">
+                <div class="formRow">
+                    <div class="formGroup">
+                        <label for="contactName">Name</label>
+                        <input type="text" id="contactName" placeholder="Your name">
+                    </div>
+                    <div class="formGroup">
+                        <label for="contactEmail">Email</label>
+                        <input type="email" id="contactEmail" placeholder="your@email.com">
+                    </div>
+                </div>
+                <div class="formGroup">
+                    <label for="contactSubject">Subject</label>
+                    <input type="text" id="contactSubject" placeholder="What's this about?">
+                </div>
+                <div class="formGroup">
+                    <label for="contactMessage">Message</label>
+                    <textarea id="contactMessage" rows="7" placeholder="Hi Sam, I'd love to..."></textarea>
+                </div>
+                <button type="submit" id="submitBtn">Send Message</button>
+            </form>
+        </div>
     </section>
+
+    <!-- ======== FOOTER ======== -->
     <section id="footer">
-        <h1>Footer</h1>
+        <div id="footerTop">
+            <div id="footerBrand">
+                <h2>Chen Foong</h2>
+                <p>CS &amp; Cybersecurity · UWA · Class of 2026</p>
+                <div id="footerSocial">
+                    <a href="https://www.instagram.com/floofing_doodles/" target="_blank">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none">
+                            <path d="M7.8 2H16.2C19.4 2 22 4.6 22 7.8V16.2C22 19.4 19.4 22 16.2 22H7.8C4.6 22 2 19.4 2 16.2V7.8C2 4.6 4.6 2 7.8 2ZM7.6 4C6.64522 4 5.72955 4.37928 5.05442 5.05442C4.37928 5.72955 4 6.64522 4 7.6V16.4C4 18.39 5.61 20 7.6 20H16.4C17.3548 20 18.2705 19.6207 18.9456 18.9456C19.6207 18.2705 20 17.3548 20 16.4V7.6C20 5.61 18.39 4 16.4 4H7.6ZM17.25 5.5C17.5815 5.5 17.8995 5.6317 18.1339 5.86612C18.3683 6.10054 18.5 6.41848 18.5 6.75C18.5 7.08152 18.3683 7.39946 18.1339 7.63388C17.8995 7.8683 17.5815 8 17.25 8C16.9185 8 16.6005 7.8683 16.3661 7.63388C16.1317 7.39946 16 7.08152 16 6.75C16 6.41848 16.1317 6.10054 16.3661 5.86612C16.6005 5.6317 16.9185 5.5 17.25 5.5ZM12 7C13.3261 7 14.5979 7.52678 15.5355 8.46447C16.4732 9.40215 17 10.6739 17 12C17 13.3261 16.4732 14.5979 15.5355 15.5355C14.5979 16.4732 13.3261 17 12 17C10.6739 17 9.40215 16.4732 8.46447 15.5355C7.52678 14.5979 7 13.3261 7 12C7 10.6739 7.52678 9.40215 8.46447 8.46447C9.40215 7.52678 10.6739 7 12 7ZM12 9C11.2044 9 10.4413 9.31607 9.87868 9.87868C9.31607 10.4413 9 11.2044 9 12C9 12.7956 9.31607 13.5587 9.87868 14.1213C10.4413 14.6839 11.2044 15 12 15C12.7956 15 13.5587 14.6839 14.1213 14.1213C14.6839 13.5587 15 12.7956 15 12C15 11.2044 14.6839 10.4413 14.1213 9.87868C13.5587 9.31607 12.7956 9 12 9Z" fill="#666"/>
+                        </svg>
+                    </a>
+                    <a href="https://www.linkedin.com/in/chenfoong" target="_blank">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none">
+                            <path d="M1.74081 6.12508C1.24605 5.66572 1 5.09711 1 4.42057C1 3.74403 1.24736 3.15039 1.74081 2.6897C2.23556 2.23034 2.87244 2 3.65273 2C4.43303 2 5.04491 2.23034 5.53835 2.6897C6.03311 3.14907 6.27915 3.72692 6.27915 4.42057C6.27915 5.11422 6.03179 5.66572 5.53835 6.12508C5.04359 6.58445 4.41592 6.81479 3.65273 6.81479C2.88954 6.81479 2.23556 6.58445 1.74081 6.12508ZM5.86336 8.76018V22.8439H1.41448V8.76018H5.86336Z" fill="#666"/>
+                            <path d="M20.6732 10.1514C21.643 11.2044 22.1272 12.6496 22.1272 14.4897V22.595H17.902V15.0609C17.902 14.133 17.6612 13.4117 17.1809 12.8984C16.7007 12.385 16.0533 12.127 15.2427 12.127C14.4321 12.127 13.7847 12.3837 13.3044 12.8984C12.8242 13.4117 12.5834 14.133 12.5834 15.0609V22.595H8.33321V8.72065H12.5834V10.5607C13.0136 9.94738 13.594 9.463 14.3229 9.1063C15.0519 8.7496 15.8717 8.5719 16.7836 8.5719C18.4073 8.5719 19.7047 9.09839 20.6732 10.1514Z" fill="#666"/>
+                        </svg>
+                    </a>
+                    <a href="https://www.youtube.com/@floofingdoodles" target="_blank">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none">
+                            <path d="M23.804 8.28916C23.6627 6.92868 23.3587 5.42472 22.2399 4.63435C21.3733 4.02144 20.2342 3.99878 19.1709 4.00004C16.9231 4.0013 14.674 4.00382 12.4262 4.00508C10.2641 4.0076 8.1021 4.00886 5.94007 4.01138C5.03691 4.01264 4.15897 3.94217 3.32014 4.33231C2.59988 4.66709 2.03604 5.30389 1.69672 6.01245C1.22622 6.99789 1.12784 8.11423 1.07107 9.20412C0.966378 11.1888 0.97773 13.1786 1.10261 15.1621C1.19469 16.6094 1.42805 18.209 2.54943 19.1315C3.54341 19.9483 4.94608 19.9886 6.23523 19.9898C10.3272 19.9936 14.4204 19.9974 18.5137 19.9999C19.0384 20.0012 19.5859 19.9911 20.1207 19.9332C21.1727 19.8199 22.1755 19.5191 22.8516 18.7414C23.534 17.9573 23.7094 16.8661 23.8128 15.8329C24.0651 13.3258 24.0626 10.7949 23.804 8.28916ZM10.0598 15.5144V8.4855L16.1599 11.9993L10.0598 15.5144Z" fill="#666"/>
+                        </svg>
+                    </a>
+                    <a href="https://github.com/chenfoonglim" target="_blank">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="#666" viewBox="0 0 24 24">
+                            <path d="M12 .5C5.73.5.5 5.73.5 12c0 5.09 3.29 9.4 7.86 10.94.58.11.79-.25.79-.56v-2.14c-3.2.69-3.87-1.54-3.87-1.54-.53-1.35-1.3-1.71-1.3-1.71-1.06-.73.08-.72.08-.72 1.17.08 1.79 1.21 1.79 1.21 1.04 1.78 2.73 1.26 3.4.96.1-.76.4-1.26.72-1.55-2.55-.29-5.23-1.28-5.23-5.7 0-1.26.45-2.3 1.2-3.11-.12-.29-.52-1.46.12-3.05 0 0 .98-.31 3.2 1.18a11.1 11.1 0 0 1 5.82 0c2.2-1.49 3.18-1.18 3.18-1.18.65 1.59.25 2.76.13 3.05.75.81 1.2 1.85 1.2 3.11 0 4.43-2.69 5.4-5.25 5.68.41.35.77 1.03.77 2.08v3.08c0 .31.21.68.8.56A10.99 10.99 0 0 0 23.5 12c0-6.27-5.23-11.5-11.5-11.5z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div id="footerNav">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#aboutMe">About Me</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div id="footerContactInfo">
+                <h3>Get In Touch</h3>
+                <p>Open to graduate software developer and web developer roles. Let's build something great together.</p>
+                <a href="#contact" class="footerCTA">Message Me</a>
+            </div>
+        </div>
+        <div id="footerBottom">
+            <p>&copy; 2026 Chen Foong Lim. All rights reserved.</p>
+        </div>
     </section>
-    <script src="js/navColorChange.js" ></script>
+
+    <!-- ======== PROJECT MODAL ======== -->
+    <div id="projectModal" class="modal-overlay">
+        <div class="modal-card">
+            <button class="modal-close" id="modalClose">&times;</button>
+            <div class="modal-gallery" id="modalGallery"></div>
+            <div class="modal-body">
+                <div class="modal-meta">
+                    <div class="modal-tags" id="modalTags"></div>
+                    <span class="modal-year" id="modalYear"></span>
+                </div>
+                <h2 class="modal-title" id="modalTitle"></h2>
+                <p class="modal-description" id="modalDesc"></p>
+                <div class="modal-footer" id="modalLinks"></div>
+            </div>
+        </div>
+    </div>
+    <script src="js/navColorChange.js"></script>
+    <script src="js/portfolio.js"></script>
 
     <!-- <script src="js/smoothScroll.js"></script> -->
 
