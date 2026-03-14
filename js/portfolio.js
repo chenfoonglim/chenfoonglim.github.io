@@ -249,3 +249,80 @@ modal.addEventListener('click', function (e) {
 document.addEventListener('keydown', function (e) {
   if (e.key === 'Escape') closeModal();
 });
+
+
+/* ── Contact form — fetch submit ─────────────────────────────── */
+(function () {
+  var form      = document.getElementById('contactForm');
+  var submitBtn = document.getElementById('submitBtn');
+  var popup     = document.getElementById('contactPopup');
+  var popIcon   = document.getElementById('contactPopupIcon');
+  var popTitle  = document.getElementById('contactPopupTitle');
+  var popMsg    = document.getElementById('contactPopupMsg');
+  var popClose  = document.getElementById('contactPopupClose');
+
+  var SVG_SUCCESS =
+    '<svg xmlns="http://www.w3.org/2000/svg" width="52" height="52" viewBox="0 0 52 52" fill="none">' +
+    '<circle cx="26" cy="26" r="25" stroke="url(#sg)" stroke-width="1.5"/>' +
+    '<path d="M15 26.5l8 8 14-16" stroke="url(#sg)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>' +
+    '<defs><linearGradient id="sg" x1="0" y1="0" x2="52" y2="52" gradientUnits="userSpaceOnUse">' +
+    '<stop stop-color="#0FF"/><stop offset="1" stop-color="#209BFF"/></linearGradient></defs></svg>';
+
+  var SVG_ERROR =
+    '<svg xmlns="http://www.w3.org/2000/svg" width="52" height="52" viewBox="0 0 52 52" fill="none">' +
+    '<circle cx="26" cy="26" r="25" stroke="#FF4D4D" stroke-width="1.5"/>' +
+    '<path d="M18 18l16 16M34 18L18 34" stroke="#FF4D4D" stroke-width="2" stroke-linecap="round"/>' +
+    '</svg>';
+
+  function showPopup(success) {
+    if (success) {
+      popIcon.innerHTML    = SVG_SUCCESS;
+      popTitle.textContent = 'Message Sent!';
+      popMsg.textContent   = "Thanks for reaching out. I'll get back to you as soon as possible.";
+      popup.classList.remove('popup-error');
+    } else {
+      popIcon.innerHTML    = SVG_ERROR;
+      popTitle.textContent = 'Something went wrong';
+      popMsg.textContent   = 'Your message could not be sent. Please try again or contact me directly by email.';
+      popup.classList.add('popup-error');
+    }
+    popup.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closePopup() {
+    popup.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  popClose.addEventListener('click', closePopup);
+  popup.addEventListener('click', function (e) {
+    if (e.target === popup) closePopup();
+  });
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    submitBtn.disabled    = true;
+    submitBtn.textContent = 'Sending…';
+
+    var data = new FormData(form);
+
+    fetch('https://api.web3forms.com/submit', { method: 'POST', body: data })
+      .then(function (res) { return res.json(); })
+      .then(function (json) {
+        if (json.success) {
+          form.reset();
+          showPopup(true);
+        } else {
+          showPopup(false);
+        }
+      })
+      .catch(function () {
+        showPopup(false);
+      })
+      .finally(function () {
+        submitBtn.disabled    = false;
+        submitBtn.textContent = 'Send Message';
+      });
+  });
+})();

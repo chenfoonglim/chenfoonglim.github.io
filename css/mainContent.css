@@ -852,6 +852,82 @@ section#footer {
 
 
 /* ============================================================
+   CONTACT RESULT POPUP
+   ============================================================ */
+
+.contact-popup-card {
+    background: linear-gradient(160deg, #1c1c1c, #0e0e0e);
+    border: 1px solid #252525;
+    border-radius: 1.5rem;
+    padding: 2.5rem 2rem;
+    width: 100%;
+    max-width: 380px;
+    text-align: center;
+    transform: translateY(30px);
+    transition: transform 0.25s ease;
+}
+
+.modal-overlay.open .contact-popup-card {
+    transform: translateY(0);
+}
+
+#contactPopupIcon {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1.25rem;
+}
+
+#contactPopupTitle {
+    font-size: 1.3rem;
+    font-weight: lighter;
+    background: linear-gradient(90deg, #0FF 0.34%, #209BFF 90.34%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 0.6rem;
+}
+
+#contactPopup.popup-error #contactPopupTitle {
+    background: none;
+    -webkit-text-fill-color: #FF4D4D;
+}
+
+#contactPopupMsg {
+    color: #959595;
+    font-size: 0.9rem;
+    font-weight: lighter;
+    line-height: 1.7;
+    margin-bottom: 1.75rem;
+}
+
+#contactPopupClose {
+    padding: 0.6rem 2rem;
+    border-radius: 2rem;
+    border: 1px solid #18B6FF;
+    background: transparent;
+    color: #18B6FF;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+#contactPopupClose:hover {
+    background: #18B6FF;
+    color: #000;
+}
+
+#contactPopup.popup-error #contactPopupClose {
+    border-color: #FF4D4D;
+    color: #FF4D4D;
+}
+
+#contactPopup.popup-error #contactPopupClose:hover {
+    background: #FF4D4D;
+    color: #000;
+}
+
+
+/* ============================================================
    RESPONSIVE — MOBILE (≤800px)
    ============================================================ */
 

@@ -523,7 +523,7 @@
             </div>
 
             <!-- Form — centred -->
-            <form id="contactForm" action="https://api.web3forms.com/submit" method="POST">
+            <form id="contactForm">
                 <input type="hidden" name="access_key" value="c6309a42-ff13-492c-b29e-46029621d49d">
                 <div class="formRow">
                     <div class="formGroup">
@@ -624,5 +624,16 @@
         hello
     </button>
     <img src="https://scriptchaser1337.github.io/htmlheadache/coolduck.jpg" alt="Placeholder image" id="quack"> -->
+
+    <!-- Contact result popup -->
+    <div id="contactPopup" class="modal-overlay">
+        <div class="contact-popup-card">
+            <div id="contactPopupIcon"></div>
+            <h3 id="contactPopupTitle"></h3>
+            <p id="contactPopupMsg"></p>
+            <button id="contactPopupClose">OK</button>
+        </div>
+    </div>
+
 </body>
 </html>
