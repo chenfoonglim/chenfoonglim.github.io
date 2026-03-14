@@ -261,6 +261,8 @@ document.addEventListener('keydown', function (e) {
   var popMsg    = document.getElementById('contactPopupMsg');
   var popClose  = document.getElementById('contactPopupClose');
 
+  if (!form || !popup || !popClose) return;
+
   var SVG_SUCCESS =
     '<svg xmlns="http://www.w3.org/2000/svg" width="52" height="52" viewBox="0 0 52 52" fill="none">' +
     '<circle cx="26" cy="26" r="25" stroke="url(#sg)" stroke-width="1.5"/>' +
