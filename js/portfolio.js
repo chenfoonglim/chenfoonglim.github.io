@@ -42,7 +42,7 @@ const projectData = {
     description:
       'A cross-platform mobile application built for UWA nursing students to track internship pre-requisites, submission deadlines, and progress milestones. Developed in close collaboration with real clients from the UWA School of Nursing, the app uses Supabase for real-time database sync and authentication, and was designed with a clean, accessible UI to suit students in a healthcare setting.',
     github: 'https://github.com/chenfoonglim',
-    images: [] // add image paths here e.g. ['images/stars1.png', 'images/stars2.png']
+    images: [] // e.g. ['images/stars/screenshot1.png']
   },
 
   'ai-matcher': {
@@ -73,6 +73,16 @@ const projectData = {
       'A two-player retro Snake game written in Python featuring real-time state management, collision detection, power-ups, and a live scoreboard. Each player controls a snake on the same keyboard, competing to eat food and outlast the other. The game loop is tightly optimised to maintain consistent frame timing, and the codebase follows OOP principles for clean extensibility.',
     github: 'https://github.com/chenfoonglim',
     images: []
+  },
+
+  'aipaca': {
+    title: 'AIpaca',
+    year: '2025',
+    tags: ['Next.js 15', 'React', 'Tailwind CSS', 'Ollama', 'TypeScript'],
+    description:
+      'A privacy-first local AI chat application built with Next.js 15 (App Router) and React, styled with Tailwind CSS. Uses Ollama as the backend to run large language models entirely on your own machine — no cloud APIs, no data sent externally. Features a multi-conversation sidebar with persistent chat history saved to disk, background streaming so switching chats never interrupts generation, and per-conversation settings including temperature, top-k/p, context window size, and system prompt. The UI renders markdown, syntax-highlighted code blocks, and KaTeX math equations. Optional features include web search via the Brave Search API with cited sources, a reasoning/thinking mode that surfaces the model\'s internal thought process, and image attachment support.',
+    github: 'https://github.com/chenfoonglim',
+    images: ['images/aipaca/Chat_window.png', 'images/aipaca/setttings.png', 'images/aipaca/light.png']
   },
 
   /* ── ART PORTFOLIO ── */
@@ -120,6 +130,26 @@ const projectData = {
     images: []
   }
 };
+
+/* ── Card thumbnails ─────────────────────────────────────────
+   Inject the first image from each project's images array
+   into its card on the main portfolio grid.
+──────────────────────────────────────────────────────────── */
+document.querySelectorAll('.projectCard[data-project-id]').forEach(function (card) {
+  var id   = card.getAttribute('data-project-id');
+  var data = projectData[id];
+  if (!data || !data.images || !data.images.length) return;
+
+  var imgDiv = card.querySelector('.projectImage');
+  if (!imgDiv) return;
+
+  var img = document.createElement('img');
+  img.src = data.images[0];
+  img.alt = data.title;
+  img.style.cssText = 'width:100%;height:100%;object-fit:cover;border-radius:inherit;display:block;';
+  imgDiv.innerHTML = '';
+  imgDiv.appendChild(img);
+});
 
 
 /* ── Tab switching ───────────────────────────────────────────── */
@@ -197,11 +227,14 @@ function openModal(projectId) {
   if (data.images && data.images.length > 0) {
     mGallery.style.display = '';
     data.images.forEach(function (src) {
+      var wrap = document.createElement('div');
+      wrap.className = 'modal-img-wrap';
       var img = document.createElement('img');
       img.src = src;
       img.alt = data.title;
       img.className = 'modal-img';
-      mGallery.appendChild(img);
+      wrap.appendChild(img);
+      mGallery.appendChild(wrap);
     });
   } else {
     /* No images yet — show a styled placeholder */
@@ -227,6 +260,30 @@ function closeModal() {
   modal.classList.remove('open');
   document.body.style.overflow = '';
 }
+
+/* ── Lightbox ──────────────────────────────────────────────── */
+(function () {
+  var lightbox    = document.getElementById('lightbox');
+  var lightboxImg = document.getElementById('lightboxImg');
+  if (!lightbox || !lightboxImg) return;
+
+  document.addEventListener('click', function (e) {
+    var img = e.target.closest('.modal-img-wrap') && e.target.closest('.modal-img-wrap').querySelector('img');
+    if (img) {
+      lightboxImg.src = img.src;
+      lightboxImg.alt = img.alt;
+      lightbox.classList.add('open');
+    }
+  });
+
+  lightbox.addEventListener('click', function () {
+    lightbox.classList.remove('open');
+  });
+
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') lightbox.classList.remove('open');
+  });
+})();
 
 
 /* ── Open modal when a project card is clicked ───────────────── */

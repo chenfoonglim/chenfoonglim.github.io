@@ -454,8 +454,10 @@
     position: absolute;
     top: 1.25rem;
     right: 1.25rem;
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid #2a2a2a;
+    background: rgba(30, 30, 30, 0.55);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     color: #959595;
     width: 2.2rem;
     height: 2.2rem;
@@ -472,7 +474,7 @@
 }
 
 .modal-close:hover {
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.12);
     color: white;
 }
 
@@ -489,30 +491,23 @@
 .modal-gallery::-webkit-scrollbar-track { background: transparent; }
 .modal-gallery::-webkit-scrollbar-thumb { background: #2a2a2a; border-radius: 2px; }
 
-.modal-img {
+.modal-img-wrap {
     flex-shrink: 0;
-    width: 100%;
-    min-width: 300px;
     height: 220px;
     border-radius: 1rem;
     overflow: hidden;
-    background-image:
-        radial-gradient(ellipse at 50% 50%, rgba(32, 155, 255, 0.2) 0%, transparent 70%),
-        linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
-    background-size: 100% 100%, 24px 24px, 24px 24px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #2e2e2e;
-    font-size: 0.82rem;
-    font-weight: lighter;
+    cursor: zoom-in;
+    transition: opacity 0.2s;
 }
 
-.modal-img img {
-    width: 100%;
+.modal-img-wrap:hover {
+    opacity: 0.85;
+}
+
+.modal-img {
     height: 100%;
-    object-fit: cover;
+    width: auto;
+    display: block;
 }
 
 .modal-body { padding: 1.75rem; }
@@ -578,6 +573,37 @@
 .modal-card::-webkit-scrollbar-track { background: transparent; }
 .modal-card::-webkit-scrollbar-thumb { background: #2a2a2a; border-radius: 2px; }
 
+
+/* ============================================================
+   LIGHTBOX
+   ============================================================ */
+
+#lightbox {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.92);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10000;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease;
+    cursor: zoom-out;
+}
+
+#lightbox.open {
+    opacity: 1;
+    pointer-events: all;
+}
+
+#lightbox img {
+    max-width: 90vw;
+    max-height: 90vh;
+    border-radius: 0.75rem;
+    object-fit: contain;
+    box-shadow: 0 0 80px rgba(0,0,0,0.8);
+}
 
 /* ============================================================
    CONTACT — CENTERED LAYOUT
@@ -967,7 +993,8 @@ section#footer {
 
     /* Modal */
     .modal-overlay  { padding: 1rem; }
-    .modal-img      { height: 180px; min-width: 240px; }
+    .modal-img-wrap { height: 180px; }
+    .modal-gallery  { gap: 0.4rem; padding: 0.75rem 0.75rem 0; }
     .modal-body     { padding: 1.25rem; }
     .modal-title    { font-size: 1.3rem; }
 }
