@@ -77,7 +77,7 @@ const projectData = {
 
   'aipaca': {
     title: 'AIpaca',
-    year: '2025',
+    year: '2026',
     tags: ['Next.js 15', 'React', 'Tailwind CSS', 'Ollama', 'TypeScript'],
     description:
       'A privacy-first local AI chat application built with Next.js 15 (App Router) and React, styled with Tailwind CSS. Uses Ollama as the backend to run large language models entirely on your own machine — no cloud APIs, no data sent externally. Features a multi-conversation sidebar with persistent chat history saved to disk, background streaming so switching chats never interrupts generation, and per-conversation settings including temperature, top-k/p, context window size, and system prompt. The UI renders markdown, syntax-highlighted code blocks, and KaTeX math equations. Optional features include web search via the Brave Search API with cited sources, a reasoning/thinking mode that surfaces the model\'s internal thought process, and image attachment support.',
