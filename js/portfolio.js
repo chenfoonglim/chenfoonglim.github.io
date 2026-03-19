@@ -42,7 +42,7 @@ const projectData = {
     description:
       'A cross-platform mobile application built for UWA nursing students to track internship pre-requisites, submission deadlines, and progress milestones. Developed in close collaboration with real clients from the UWA School of Nursing, the app uses Supabase for real-time database sync and authentication, and was designed with a clean, accessible UI to suit students in a healthcare setting.',
     github: 'https://github.com/chenfoonglim',
-    images: ['images/stars/login.png','images/stars/dashboard.png','images/stars/edit.png','images/stars/search.png',] // e.g. ['images/stars/screenshot1.png']
+    images: ['images/stars/dashboard.png','images/stars/login.png','images/stars/edit.png','images/stars/search.png',] // e.g. ['images/stars/screenshot1.png']
   },
 
   'ai-matcher': {
