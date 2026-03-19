@@ -62,7 +62,7 @@ const projectData = {
     description:
       'A desktop survey-management tool built with JavaFX featuring persistent storage, an analytics dashboard, and multi-role access. The system allows administrators to create and distribute surveys, while respondents can submit answers through a polished GUI. Data is stored persistently and results are visualised through charts and summary views — designed with a clean, professional UI.',
     github: 'https://github.com/chenfoonglim',
-    images: ['images/survey-mgmt/login.png','images/survey-mgmt/data.png','images/survey-mgmt/forn.png' ]
+    images: ['images/survey-mgmt/login.png','images/survey-mgmt/data.png','images/survey-mgmt/form.png' ]
   },
 
   'snake-game': {
