@@ -86,14 +86,30 @@ const projectData = {
   },
 
   /* ── ART PORTFOLIO ── */
-  'event-posters': {
-    title: 'Event Poster Design',
-    year: '2023 – 2025',
-    tags: ['Poster Design', 'Photoshop', 'Figma', 'Branding'],
+  'ltw': {
+    title: 'Leading Thriving Workplaces',
+    year: '2025',
+    tags: ['Report Design', 'Canva', 'Affinity'],
     description:
-      'A collection of event posters and promotional materials created for the Malaysian Cultural Society at UWA. Designs span cultural night shows, fundraisers, society drives, and social events — each with a distinct visual identity tailored to the occasion. Work spans Photoshop for photo-compositing and detailed illustration, and Figma for layout and typography-heavy pieces.',
-    link: 'https://www.instagram.com/floofing_doodles/',
-    linkLabel: 'View on Instagram',
+      'Designed and delivered a professional report template for the Leading Thriving Workplaces final report during a Digital Content internship at UWA\'s School of Health and Clinical Sciences. Identified and evaluated local photographers, led team discussions to select the most suitable candidate, and negotiated and documented usage agreements for the report.',
+    images: []
+  },
+
+  'mcs': {
+    title: 'Malaysian Cultural Society',
+    year: '2024–2025',
+    tags: ['Poster Design', 'Branding', 'Canva', 'Procreate'],
+    description:
+      'Served as Creative Assistant Director for UWA\'s Malaysian Cultural Society. Designed event posters, merchandise, and promotional materials across cultural nights, fundraisers, and society events. Coordinated team decoration for major cultural events and worked closely with the executive committee to strengthen the club\'s visual identity across social media and physical events.',
+    images: []
+  },
+
+  'brighttanica': {
+    title: 'Brighttanica Perth',
+    year: '2026',
+    tags: ['Branding', 'Print Design', 'Canva', 'Affinity'],
+    description:
+      'Designed a business card and promotional banner for Brighttanica Perth.',
     images: []
   },
 
@@ -102,7 +118,7 @@ const projectData = {
     year: '2021 – Present',
     tags: ['Digital Art', 'Procreate', 'Illustration', 'Character Design'],
     description:
-      'Original digital illustrations and character art published under the @floofing_doodles brand on Instagram and YouTube. The body of work spans fan art, original characters, environment pieces, and stylised portraits — produced primarily in Procreate with occasional post-processing in Photoshop. The YouTube channel features speedpaint videos showcasing the creative process.',
+      'Original digital illustrations and character art published under the @floofing_doodles brand on Instagram and YouTube. The body of work spans fan art, original characters, environment pieces, and stylised portraits, produced primarily in Procreate with occasional post-processing in Photoshop. The YouTube channel features speedpaint videos showcasing the creative process.',
     link: 'https://www.instagram.com/floofing_doodles/',
     linkLabel: 'View on Instagram',
     images: []

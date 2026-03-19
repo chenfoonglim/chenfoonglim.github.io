@@ -56,6 +56,9 @@
     box-shadow: 0 10px 10px rgba(0,0,0, 0.3);
     backdrop-filter: blur(100px);
     -webkit-backdrop-filter: blur(100px);
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
 }
 
 .sIndBoxes:hover{
