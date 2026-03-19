@@ -42,7 +42,7 @@ const projectData = {
     description:
       'A cross-platform mobile application built for UWA nursing students to track internship pre-requisites, submission deadlines, and progress milestones. Developed in close collaboration with real clients from the UWA School of Nursing, the app uses Supabase for real-time database sync and authentication, and was designed with a clean, accessible UI to suit students in a healthcare setting.',
     github: 'https://github.com/chenfoonglim',
-    images: [] // e.g. ['images/stars/screenshot1.png']
+    images: ['images/stars/login.png','images/stars/dashboard.png','images/stars/edit.png','images/stars/search.png',] // e.g. ['images/stars/screenshot1.png']
   },
 
   'ai-matcher': {
@@ -52,7 +52,7 @@ const projectData = {
     description:
       'A full-stack hackathon web application that uses the ChatGPT API to intelligently match job seekers with employers based on skills, experience, and preferences. Built under time pressure during a 24-hour hackathon, the app handles both employer and candidate profiles, performs AI-driven compatibility scoring, and presents ranked match results through a clean web interface.',
     github: 'https://github.com/chenfoonglim',
-    images: []
+    images: ['images/ai-matcher/login.png', 'images/ai-matcher/mentor.png', 'images/ai-matcher/fund.png']
   },
 
   'survey-mgmt': {
@@ -62,7 +62,7 @@ const projectData = {
     description:
       'A desktop survey-management tool built with JavaFX featuring persistent storage, an analytics dashboard, and multi-role access. The system allows administrators to create and distribute surveys, while respondents can submit answers through a polished GUI. Data is stored persistently and results are visualised through charts and summary views — designed with a clean, professional UI.',
     github: 'https://github.com/chenfoonglim',
-    images: []
+    images: ['images/survey-mgmt/login.png','images/survey-mgmt/data.png','images/survey-mgmt/forn.png' ]
   },
 
   'snake-game': {
@@ -72,7 +72,7 @@ const projectData = {
     description:
       'A two-player retro Snake game written in Python featuring real-time state management, collision detection, power-ups, and a live scoreboard. Each player controls a snake on the same keyboard, competing to eat food and outlast the other. The game loop is tightly optimised to maintain consistent frame timing, and the codebase follows OOP principles for clean extensibility.',
     github: 'https://github.com/chenfoonglim',
-    images: []
+    images: ['images/snake-game/snake.png']
   },
 
   'aipaca': {
