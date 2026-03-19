@@ -130,13 +130,13 @@
     align-items: flex-start;
 }
 
-#aboutBio   { flex: 1.2; }
+#aboutBio   { flex: 1; }
 #aboutSkills { flex: 1; }
 
 #aboutStats {
     display: flex;
     gap: 1.25rem;
-    margin-top: 2.5rem;
+    margin-top: 3rem;
 }
 
 .statCard {
@@ -272,6 +272,8 @@
     -webkit-backdrop-filter: blur(100px);
     transition: transform 0.25s ease;
     cursor: pointer;
+    display: flex;
+    flex-direction: column;
 }
 
 .projectCard:hover { transform: translateY(-5px); }
@@ -336,7 +338,12 @@
     background-size: 100% 100%, 24px 24px, 24px 24px;
 }
 
-.projectInfo { padding: 1.5rem; }
+.projectInfo {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
 
 .projectTags {
     display: flex;
@@ -374,6 +381,7 @@
     display: flex;
     gap: 0.75rem;
     align-items: center;
+    margin-top: auto;
 }
 
 .projLinkOutline {
@@ -405,6 +413,12 @@
 }
 
 .projLinkBtn:hover { opacity: 0.85; }
+
+.projYear {
+    color: #575757;
+    font-size: 0.82rem;
+    font-weight: lighter;
+}
 
 
 /* ============================================================

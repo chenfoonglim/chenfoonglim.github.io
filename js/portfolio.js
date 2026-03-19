@@ -97,17 +97,6 @@ const projectData = {
     images: []
   },
 
-  'merchandise': {
-    title: 'Merchandise Design',
-    year: '2023 – 2025',
-    tags: ['Merchandise', 'Design', 'Photoshop', 'Print'],
-    description:
-      'Apparel and merchandise designs produced for cultural events at the Malaysian Cultural Society, UWA — including t-shirts, tote bags, stickers, and lanyards. Each design went through an iterative brief, review, and print-ready production process. The goal was always to balance cultural identity with wearable, modern aesthetics.',
-    link: 'https://www.instagram.com/floofing_doodles/',
-    linkLabel: 'View on Instagram',
-    images: []
-  },
-
   'digital-illus': {
     title: 'Digital Illustrations',
     year: '2021 – Present',
@@ -119,16 +108,6 @@ const projectData = {
     images: []
   },
 
-  'art-commissions': {
-    title: 'Art Commissions',
-    year: '2022 – Present',
-    tags: ['Commission', 'Procreate', 'Digital Art', 'Portraits'],
-    description:
-      'Custom digital art commissions created for clients worldwide — character portraits, couple illustrations, and original-character artwork. Each piece is crafted individually in Procreate based on client references and briefs, with multiple revision rounds to ensure satisfaction. Completed commissions have been used as profile pictures, prints, and personal gifts.',
-    link: 'https://www.instagram.com/floofing_doodles/',
-    linkLabel: 'View on Instagram',
-    images: []
-  }
 };
 
 /* ── Card thumbnails ─────────────────────────────────────────
