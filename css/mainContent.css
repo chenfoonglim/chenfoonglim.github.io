@@ -166,6 +166,18 @@
     font-weight: lighter;
 }
 
+.skillsGroup {
+    margin-bottom: 1rem;
+}
+
+.skillsLabel {
+    font-size: 0.7rem;
+    color: #555;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin: 0 0 0.6rem 0;
+}
+
 .skillsGrid {
     display: flex;
     flex-wrap: wrap;
