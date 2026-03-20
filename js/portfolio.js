@@ -5,7 +5,7 @@
 /* ── Role cycler ─────────────────────────────────────────────── */
 (function () {
     var roles = [
-        'Software/Web Developer',
+        'Software Developer',
         'Web Developer',
         'Creative Designer',
         'Cybersecurity Student'
