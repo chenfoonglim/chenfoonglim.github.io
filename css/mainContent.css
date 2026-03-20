@@ -715,33 +715,32 @@
 
 .formGroup label {
     font-size: 0.88rem;
-    color: #959595;
+    color: #c0c0c0;
     font-weight: lighter;
 }
 
 .formGroup input,
 .formGroup textarea {
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid #252525;
+    background: rgba(255, 255, 255, 0.07);
+    border: none;
     border-radius: 0.5rem;
     color: white;
     padding: 0.75rem 1rem;
     font-family: inherit;
     font-weight: lighter;
     font-size: 0.93rem;
-    transition: border-color 0.3s ease;
+    transition: box-shadow 0.3s ease;
     resize: vertical;
 }
 
 .formGroup input:focus,
 .formGroup textarea:focus {
     outline: none;
-    border-color: rgba(24, 182, 255, 0.3);
     box-shadow: 0 0 6px rgba(0, 200, 255, 0.85), 0 0 12px rgba(24, 182, 255, 0.5);
 }
 
 .formGroup input::placeholder,
-.formGroup textarea::placeholder { color: #353535; }
+.formGroup textarea::placeholder { color: #666666; }
 
 #submitBtn {
     margin-top: 1rem;
