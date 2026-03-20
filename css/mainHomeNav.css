@@ -195,11 +195,12 @@
         margin-left: 0.3rem;
         margin-top: 0.05rem;
         margin-bottom: 0.05rem;
+        border-color: #0FF;
+        box-shadow: 0 0 6px rgba(0, 200, 255, 0.85), 0 0 12px rgba(24, 182, 255, 0.5);
     }
     #social #insta:hover{
         margin-left: 0.1rem;
-        
-    } 
+    }
     
     #social{
         display: flex;
@@ -221,25 +222,24 @@
         margin-top: 3rem;
         font-size: 1.25rem;
         cursor: pointer;
-        transition: padding 0.3s ease;
+        transition: transform 0.2s ease;
         font-weight: lighter;
         text-decoration: none;
         min-width: 13rem;
         text-align: center;
     }
-    
+
     #homeButton a:hover{
-        padding: 0.95rem 2.7rem;
-        border-radius: 0.6rem;
-        /* transform: scale(1.03); */
+        transform: scale(1.05);
+        box-shadow: 0 0 6px rgba(0, 200, 255, 0.85), 0 0 12px rgba(24, 182, 255, 0.5);
     }
-    
+
     #messageMe{
         border: none;
         background: #18B6FF;
         color: #FFFFFF;
     }
-    
+
     #downloadCV{
         background-color: #FFFFFF05;
         color: #959595;

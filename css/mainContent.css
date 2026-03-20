@@ -232,12 +232,14 @@
 .portTab:hover {
     border-color: rgba(24, 182, 255, 0.35);
     color: #18B6FF;
+    box-shadow: 0 0 6px rgba(0, 200, 255, 0.85), 0 0 12px rgba(24, 182, 255, 0.5);
 }
 
 .portTab.active {
     background: rgba(24, 182, 255, 0.1);
     border-color: rgba(24, 182, 255, 0.5);
     color: #18B6FF;
+    box-shadow: 0 0 6px rgba(0, 200, 255, 0.85), 0 0 12px rgba(24, 182, 255, 0.5);
 }
 
 .portTabContent { display: none; }
@@ -282,13 +284,16 @@
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
     backdrop-filter: blur(100px);
     -webkit-backdrop-filter: blur(100px);
-    transition: transform 0.25s ease;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
     cursor: pointer;
     display: flex;
     flex-direction: column;
 }
 
-.projectCard:hover { transform: translateY(-5px); }
+.projectCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 6px rgba(0, 200, 255, 0.85), 0 0 12px rgba(24, 182, 255, 0.5);
+}
 
 /* Placeholder image areas — dot-grid with coloured glow */
 .projectImage {
@@ -510,12 +515,10 @@
     padding: 1.5rem 1.5rem 0;
     overflow-x: auto;
     scrollbar-width: thin;
-    scrollbar-color: #2a2a2a transparent;
+    scrollbar-width: none;
 }
 
-.modal-gallery::-webkit-scrollbar { height: 4px; }
-.modal-gallery::-webkit-scrollbar-track { background: transparent; }
-.modal-gallery::-webkit-scrollbar-thumb { background: #2a2a2a; border-radius: 2px; }
+.modal-gallery::-webkit-scrollbar { display: none; }
 
 .modal-img-wrap {
     flex-shrink: 0;
@@ -656,7 +659,7 @@
     backdrop-filter: blur(100px);
     -webkit-backdrop-filter: blur(100px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
-    flex: 0 1 240px;
+    flex: 1 1 240px;
 }
 
 .contactIcon {
@@ -684,10 +687,15 @@
     font-weight: lighter;
 }
 
+/* Shared width wrapper for cards + form */
+#contactBody {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
 /* Form centred below the cards */
 #contactForm {
-    max-width: 680px;
-    margin: 0 auto;
+    width: 100%;
     display: flex;
     flex-direction: column;
     gap: 1.25rem;
@@ -729,12 +737,14 @@
 .formGroup textarea:focus {
     outline: none;
     border-color: rgba(24, 182, 255, 0.3);
+    box-shadow: 0 0 6px rgba(0, 200, 255, 0.85), 0 0 12px rgba(24, 182, 255, 0.5);
 }
 
 .formGroup input::placeholder,
 .formGroup textarea::placeholder { color: #353535; }
 
 #submitBtn {
+    margin-top: 1rem;
     padding: 0.8rem 2.5rem;
     background: #18B6FF;
     color: white;
