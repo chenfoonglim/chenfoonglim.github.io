@@ -198,15 +198,6 @@ function openModal(projectId) {
 
   /* Links */
   mLinks.innerHTML = '';
-  if (data.github) {
-    var ghLink = document.createElement('a');
-    ghLink.href = data.github;
-    ghLink.target = '_blank';
-    ghLink.rel = 'noopener noreferrer';
-    ghLink.className = 'projLinkOutline';
-    ghLink.textContent = 'GitHub';
-    mLinks.appendChild(ghLink);
-  }
   if (data.link) {
     var extLink = document.createElement('a');
     extLink.href = data.link;
