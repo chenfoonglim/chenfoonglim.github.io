@@ -92,7 +92,7 @@ const projectData = {
     tags: ['Report Design', 'Canva', 'Affinity'],
     description:
       'Designed and delivered a professional report template for the Leading Thriving Workplaces final report during a Digital Content internship at UWA\'s School of Health and Clinical Sciences. Identified and evaluated local photographers, led team discussions to select the most suitable candidate, and negotiated and documented usage agreements for the report.',
-    images: []
+    images: ['images/ltw/1.png']
   },
 
   'mcs': {
@@ -101,7 +101,7 @@ const projectData = {
     tags: ['Poster Design', 'Branding', 'Canva', 'Procreate'],
     description:
       'Served as Creative Assistant Director for UWA\'s Malaysian Cultural Society. Designed event posters, merchandise, and promotional materials across cultural nights, fundraisers, and society events. Coordinated team decoration for major cultural events and worked closely with the executive committee to strengthen the club\'s visual identity across social media and physical events.',
-    images: []
+    images: ['images/event-posters/0.png', 'images/event-posters/1.png','images/event-posters/1.1.png', 'images/event-posters/2.png','images/event-posters/3.png','images/event-posters/4.png','images/event-posters/5.png']
   },
 
   'brighttanica': {
@@ -110,7 +110,7 @@ const projectData = {
     tags: ['Branding', 'Print Design', 'Canva', 'Affinity'],
     description:
       'Designed a business card and promotional banner for Brighttanica Perth.',
-    images: []
+    images: ['images/bright/1.png', 'images/bright/2.png', 'images/bright/3.png']
   },
 
   'digital-illus': {
@@ -121,7 +121,7 @@ const projectData = {
       'Original digital illustrations and character art published under the @floofing_doodles brand on Instagram and YouTube. The body of work spans fan art, original characters, environment pieces, and stylised portraits, produced primarily in Procreate with occasional post-processing in Photoshop. The YouTube channel features speedpaint videos showcasing the creative process.',
     link: 'https://www.instagram.com/floofing_doodles/',
     linkLabel: 'View on Instagram',
-    images: []
+    images: ['images/digital-illus/1.png', 'images/digital-illus/2.png', 'images/digital-illus/3.png', 'images/digital-illus/4.png']
   },
 
 };
