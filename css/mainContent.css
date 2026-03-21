@@ -518,12 +518,17 @@
     color: white;
 }
 
+.modal-gallery-frame {
+    margin: 1.5rem 1.5rem 0;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
 .modal-gallery {
     display: flex;
     gap: 0.75rem;
-    padding: 1.5rem 1.5rem 0;
+    padding: 0;
     overflow-x: auto;
-    scrollbar-width: thin;
     scrollbar-width: none;
 }
 
@@ -1038,7 +1043,8 @@ section#footer {
     /* Modal */
     .modal-overlay  { padding: 1rem; }
     .modal-img-wrap { height: 180px; }
-    .modal-gallery  { gap: 0.4rem; padding: 0.75rem 0.75rem 0; }
+    .modal-gallery-frame { margin: 0.75rem 0.75rem 0; }
+    .modal-gallery  { gap: 0.4rem; }
     .modal-body     { padding: 1.25rem; }
     .modal-title    { font-size: 1.3rem; }
 }
