@@ -249,25 +249,90 @@ function closeModal() {
 
 /* ── Lightbox ──────────────────────────────────────────────── */
 (function () {
-  var lightbox    = document.getElementById('lightbox');
-  var lightboxImg = document.getElementById('lightboxImg');
-  if (!lightbox || !lightboxImg) return;
+  var lightbox   = document.getElementById('lightbox');
+  var track      = document.getElementById('lightboxTrack');
+  var prevBtn    = document.getElementById('lightboxPrev');
+  var nextBtn    = document.getElementById('lightboxNext');
+  if (!lightbox || !track) return;
 
-  document.addEventListener('click', function (e) {
-    var img = e.target.closest('.modal-img-wrap') && e.target.closest('.modal-img-wrap').querySelector('img');
-    if (img) {
-      lightboxImg.src = img.src;
-      lightboxImg.alt = img.alt;
-      lightbox.classList.add('open');
+  var currentImages = [];
+  var currentIndex  = 0;
+
+  function getIndex() {
+    return Math.round(track.scrollLeft / track.clientWidth);
+  }
+
+  function updateNav() {
+    var hasNav = currentImages.length > 1;
+    prevBtn.style.display = hasNav ? '' : 'none';
+    nextBtn.style.display = hasNav ? '' : 'none';
+    if (hasNav) {
+      var idx = getIndex();
+      prevBtn.classList.toggle('disabled', idx <= 0);
+      nextBtn.classList.toggle('disabled', idx >= currentImages.length - 1);
     }
-  });
+  }
 
-  lightbox.addEventListener('click', function () {
+  function goTo(index, animate) {
+    currentIndex = Math.max(0, Math.min(index, currentImages.length - 1));
+    if (animate) {
+      track.scrollTo({ left: currentIndex * track.clientWidth, behavior: 'smooth' });
+    } else {
+      track.scrollLeft = currentIndex * track.clientWidth;
+    }
+  }
+
+  function openLightbox() {
+    lightbox.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeLightbox() {
     lightbox.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  /* Open */
+  document.addEventListener('click', function (e) {
+    var wrap = e.target.closest('.modal-img-wrap');
+    if (!wrap) return;
+    var allWraps = Array.from(document.querySelectorAll('#modalGallery .modal-img-wrap'));
+    currentImages = allWraps.map(function (w) { return w.querySelector('img').src; });
+    currentIndex  = allWraps.indexOf(wrap);
+
+    track.innerHTML = '';
+    currentImages.forEach(function (src, i) {
+      var slide = document.createElement('div');
+      slide.className = 'lightbox-slide';
+      var img = document.createElement('img');
+      img.src = src;
+      img.alt = allWraps[i].querySelector('img').alt;
+      slide.appendChild(img);
+      track.appendChild(slide);
+    });
+
+    updateNav();
+    openLightbox();
+    goTo(currentIndex, false);
   });
 
+  /* Buttons */
+  prevBtn.addEventListener('click', function (e) { e.stopPropagation(); goTo(getIndex() - 1, true); });
+  nextBtn.addEventListener('click', function (e) { e.stopPropagation(); goTo(getIndex() + 1, true); });
+  /* Update nav on scroll (handles manual swipe) */
+  track.addEventListener('scroll', updateNav, { passive: true });
+
+  /* Close — click backdrop or slide padding area */
+  lightbox.addEventListener('click', function (e) {
+    if (e.target === lightbox || e.target.classList.contains('lightbox-slide')) closeLightbox();
+  });
+
+  /* Keyboard */
   document.addEventListener('keydown', function (e) {
-    if (e.key === 'Escape') lightbox.classList.remove('open');
+    if (!lightbox.classList.contains('open')) return;
+    if (e.key === 'Escape')     closeLightbox();
+    if (e.key === 'ArrowLeft')  goTo(getIndex() - 1, true);
+    if (e.key === 'ArrowRight') goTo(getIndex() + 1, true);
   });
 })();
 
