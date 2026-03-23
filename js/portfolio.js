@@ -86,6 +86,21 @@ const projectData = {
     images: ['images/aipaca/Chat_window.png', 'images/aipaca/setttings.png', 'images/aipaca/light.png']
   },
 
+  'portfolio': {
+    title: 'Personal Portfolio Website',
+    year: '2026',
+    tags: ['HTML / CSS', 'JavaScript', 'UI/UX Design', 'Web Dev'],
+    description:
+      'This site. Designed and built from scratch with vanilla HTML, CSS, and JavaScript. Features include a project lightbox with swipeable image gallery, animated UI elements, and a fully responsive layout.',
+    images: [
+      'images/portfolio/1.png',
+      'images/portfolio/2.png',
+      'images/portfolio/3.png',
+      'images/portfolio/4.png',
+      'images/portfolio/5.png',
+    ]
+  },
+
   /* ── ART PORTFOLIO ── */
   'ltw': {
     title: 'Leading Thriving Workplaces',
@@ -120,8 +135,6 @@ const projectData = {
     tags: ['Digital Art', 'Procreate', 'Illustration', 'Character Design'],
     description:
       'Original digital illustrations and character art published under the @floofing_doodles brand on Instagram and YouTube. The body of work spans fan art, original characters, environment pieces, and stylised portraits, produced primarily in Procreate with occasional post-processing in Photoshop. The YouTube channel features speedpaint videos showcasing the creative process.',
-    link: 'https://www.instagram.com/floofing_doodles/',
-    linkLabel: 'View on Instagram',
     images: ['images/digital-illus/1.png', 'images/digital-illus/2.png', 'images/digital-illus/3.png', 'images/digital-illus/4.png']
   },
 
