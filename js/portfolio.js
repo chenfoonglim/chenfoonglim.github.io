@@ -5,10 +5,11 @@
 /* ── Role cycler ─────────────────────────────────────────────── */
 (function () {
     var roles = [
-        'Software Developer',
-        'Web Developer',
-        'Creative Designer',
-        'Cybersecurity Student'
+        'CS & Cybersecurity Major',
+      'Software Developer',
+      'Full-Stack Developer',
+      'Creative Designer',
+
     ];
     var idx = 0;
     var el  = document.getElementById('roleCycler');
