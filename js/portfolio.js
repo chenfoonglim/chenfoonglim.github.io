@@ -41,7 +41,7 @@ const projectData = {
     year: '2025',
     tags: ['React Native', 'Mobile Dev', 'Supabase', 'TypeScript'],
     description:
-      'A cross-platform mobile application built for UWA nursing students to track internship pre-requisites, submission deadlines, and progress milestones. Developed in close collaboration with real clients from the UWA School of Nursing, the app uses Supabase for real-time database sync and authentication, and was designed with a clean, accessible UI to suit students in a healthcare setting.',
+      'A cross-platform mobile application built for UWA nursing students to track internship pre-requisites. Developed in close collaboration with clients from the UWA School of Nursing, the app uses Supabase for real-time database sync and authentication, and was designed with a clean, accessible UI to suit students in a healthcare setting.',
     github: 'https://github.com/chenfoonglim',
     images: ['images/stars/dashboard.png','images/stars/login.png','images/stars/edit.png','images/stars/search.png',] // e.g. ['images/stars/screenshot1.png']
   },
@@ -61,7 +61,7 @@ const projectData = {
     year: '2023',
     tags: ['JavaFX', 'Java', 'Desktop Dev', 'OOP'],
     description:
-      'A desktop survey-management tool built with JavaFX featuring persistent storage, an analytics dashboard, and multi-role access. The system allows administrators to create and distribute surveys, while respondents can submit answers through a polished GUI. Data is stored persistently and results are visualised through charts and summary views — designed with a clean, professional UI.',
+      'A desktop survey-management tool built with JavaFX featuring persistent storage, an analytics dashboard, and multi-role access. The system allows administrators to create and distribute surveys, while respondents can submit answers through a polished GUI. Data is stored persistently and results are visualised through charts and summary views. Designed with a clean, professional UI.',
     github: 'https://github.com/chenfoonglim',
     images: ['images/survey-mgmt/login.png','images/survey-mgmt/data.png','images/survey-mgmt/form.png' ]
   },
@@ -71,7 +71,7 @@ const projectData = {
     year: '2022',
     tags: ['Python', 'Game Dev', 'OOP'],
     description:
-      'A two-player retro Snake game written in Python featuring real-time state management, collision detection, power-ups, and a live scoreboard. Each player controls a snake on the same keyboard, competing to eat food and outlast the other. The game loop is tightly optimised to maintain consistent frame timing, and the codebase follows OOP principles for clean extensibility.',
+      'A two-player retro Snake game written in Python featuring real-time state management, collision detection and a live scoreboard. Each player controls a snake on the same keyboard, competing to eat food and outlast the other. The game loop is tightly optimised to maintain consistent frame timing, and the codebase follows OOP principles for clean extensibility.',
     github: 'https://github.com/chenfoonglim',
     images: ['images/snake-game/snake.png']
   },
@@ -81,7 +81,7 @@ const projectData = {
     year: '2026',
     tags: ['Next.js 15', 'React', 'Tailwind CSS', 'Ollama', 'TypeScript'],
     description:
-      'A privacy-first local AI chat application built with Next.js 15 (App Router) and React, styled with Tailwind CSS. Uses Ollama as the backend to run large language models entirely on your own machine — no cloud APIs, no data sent externally. Features a multi-conversation sidebar with persistent chat history saved to disk, background streaming so switching chats never interrupts generation, and per-conversation settings including temperature, top-k/p, context window size, and system prompt. The UI renders markdown, syntax-highlighted code blocks, and KaTeX math equations. Optional features include web search via the Brave Search API with cited sources, a reasoning/thinking mode that surfaces the model\'s internal thought process, and image attachment support.',
+      'A local AI chat application built with Next.js 15 (App Router) and React, styled with Tailwind CSS. Uses Ollama as the backend to run large language models entirely locally. Features a multi-conversation sidebar with persistent chat history saved to disk, background streaming so switching chats never interrupts generation, and per-conversation settings including temperature, top-k/p, context window size, and system prompt. The UI renders markdown, syntax-highlighted code blocks, and KaTeX math equations. Optional features include web search via the Brave Search API with cited sources, a reasoning/thinking mode that surfaces the model\'s internal thought process, and image attachment support.',
     github: 'https://github.com/chenfoonglim',
     images: ['images/aipaca/Chat_window.png', 'images/aipaca/setttings.png', 'images/aipaca/light.png']
   },
@@ -134,7 +134,7 @@ const projectData = {
     year: '2021 – Present',
     tags: ['Digital Art', 'Procreate', 'Illustration', 'Character Design'],
     description:
-      'Original digital illustrations and character art published under the @floofing_doodles brand on Instagram and YouTube. The body of work spans fan art, original characters, environment pieces, and stylised portraits, produced primarily in Procreate with occasional post-processing in Photoshop. The YouTube channel features speedpaint videos showcasing the creative process.',
+      'Original digital illustrations and character art published under the @floofing_doodles brand on Instagram and YouTube. The body of work spans fan art, original characters, environment pieces, and stylised portraits, produced primarily in Procreate with occasional post-processing in Affinity/Lightroom/Photoshop. The YouTube channel features speedpaint videos showcasing the creative process.',
     images: ['images/digital-illus/1.png', 'images/digital-illus/2.png', 'images/digital-illus/3.png', 'images/digital-illus/4.png']
   },
 
